@@ -8,6 +8,9 @@ app = Flask(__name__)
 # connects default URL to render index.html
 @app.route('/')
 def index():
+    print("hello")
+    for i in range(0,1000):
+        print("{}".format(i))
     return render_template("index.html")
 
 
