@@ -2,7 +2,7 @@
 Runtime link: https://portfolio.nighthawkcodingsociety.com/
 ### Idea
 Starter code should be fun and practical.
-### Visual thoughts
+### Visual thoughts aar
 #### Organize with Bootstrap menu 
 #### Add some color and fun through VANTA Visuals (birds, halo, solar, net)
 #### Show some practical and fun links (hrefs) like Twitter, Git, Youtube
