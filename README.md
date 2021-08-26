@@ -29,6 +29,7 @@ sup
 hi
 juice
 cool 
-i like men
+i like men <3
+Hello 
 false?
-this is code
+this is code, you wish
