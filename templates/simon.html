@@ -1,0 +1,19 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Simon" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+    <!- Try building a new body here ->
+    <p>Tech Talk 1 - Body Simon</p> <br>
+    <p style="color:goldenrod;">This is a super interesting paragraph</p> <br>
+    <b2> This is a sub heading that will blow your mind</b2>
+
+
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}
