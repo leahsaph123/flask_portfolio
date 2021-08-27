@@ -32,6 +32,10 @@ def hawkers():
 def stub():
     return render_template("stub.html")
 
+@app.route('/simon/')
+def simon():
+    return render_template("simon.html")
+
 
 @app.route('/leah/')
 def leah():
