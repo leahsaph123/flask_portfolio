@@ -9,8 +9,8 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     print("hello")
-    for i in range(0,1000):
-        print("{}".format(i))
+    for i in range(0,70):
+        print("hi :3 {}".format(i))
     return render_template("index.html")
 
 
@@ -34,6 +34,10 @@ def hawkers():
 def stub():
     return render_template("stub.html")
 
+
+@app.route('/isabella/')
+def isabella():
+    return render_template("isabella.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
