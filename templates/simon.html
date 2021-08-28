@@ -7,10 +7,14 @@
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
     <!- Try building a new body here ->
-    <p>Tech Talk 1 - Body Simon</p> <br>
-    <p style="color:goldenrod;">This is a super interesting paragraph</p> <br>
-    <b2> This is a sub heading that will blow your mind</b2>
-
+    <p><b> Tech Talk 1 - Body Simon </b></p> <br>
+    <p style="color:mediumpurple;">This is a super interesting paragraph</p> <br>
+    <p>Hello, {{ name }}!</p>
+    <form action="/greet" id="greet" method="post">
+    <label for="name">Type a greeting name?</label>
+    <imput name="name" id="name"></imput>
+    <imput type="submit" value="Greetings!"</imput>
+    </form>
 
 {% endblock %}
 
