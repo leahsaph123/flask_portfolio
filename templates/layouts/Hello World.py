@@ -1,4 +1,4 @@
-@app.route('/greet', method=['GET, 'POST'])
+@app.route('/greet', method=['GET,POST'])
 def greet():
 
     if request.form:
