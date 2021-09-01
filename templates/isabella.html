@@ -5,8 +5,22 @@
     <title>isabella</title>
 </head>
 <body>
-<p>sup {{ name }}:3</p>
 
+<div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+    <div class="col-12">
+        <p>sup {{name}}!</p>
+    </div>
+    <div class="col-12">
+        <form action="/greet" id="greet" method="POST" >
+            <label for="name">Type a greeting name?</label>
+            <input name="name" id="name">
+            <input type="submit" value="Greetings!">
+        </form>
+    </div>
+    <div class="col-12">
+        <img src="/static/assets/PythonFlask.jpeg" style="height: 400px" >
+    </div>
+</div>
 
 </form>
 </body>

@@ -44,10 +44,15 @@ def simon():
     # starting and empty input default
     return render_template("simon.html", name1="World")
 
-
-@app.route('/leah/')
+@app.route('/leah/', methods=['GET', 'POST'])
 def leah():
-    return render_template("leah.html")
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("leah.html", name1=name)
+    # starting and empty input default
+    return render_template("leah.html", name1="World")
 
 
 @app.route('/isabella/')
@@ -62,6 +67,16 @@ def greet():
         if len(name) != 0:  # input field has content
             return render_template("simon.html", name=name)
     # starting and em
+@app.route('/greet', methods=['GET', 'POST'])
+def greet():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("isabella.html", name=name)
+    # starting and empty input default
+    return render_template("isabella.html", name="World")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
