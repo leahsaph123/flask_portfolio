@@ -59,7 +59,7 @@ def leah():
 def isabella():
     return render_template("isabella.html")
 
-@app.route('/greet', methods=['GET', 'POST'])
+@app.route('/isabella/greet', methods=['GET', 'POST'])
 def greet():
     # submit button has been pushed
     if request.form:
