@@ -38,10 +38,15 @@ def stub():
 def simon():
     return render_template("simon.html")
 
-
-@app.route('/leah/')
+@app.route('/leah/', methods=['GET', 'POST'])
 def leah():
-    return render_template("leah.html")
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("leah.html", name1=name)
+    # starting and empty input default
+    return render_template("leah.html", name1="World")
 
 
 @app.route('/isabella/')
