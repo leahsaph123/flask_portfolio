@@ -1,25 +1,20 @@
-<!-- Extending the predefined project layout -->
-{% extends "layouts/base.html" %}
+<!DOCTYPE html>
+<html>
+<body>
 
-<!- This variable sets name of browser tab  -->
-{% set project = "Simon" %}
+<p><b> Simon's Page </b></p>
 
-<!- This is a replacement block for Body in base.html -->
-{% block body %}
-    <!- Try building a new body here ->
-    <p><b> Tech Talk 1 - Body Simon </b></p> <br>
+</body>
+
+<p>Hello, {{ name }}!</p>
+<form action="/greet" id="greet" method="post">
+    <label for="name">Box here</label>
+    <imput name="name" id="name">
+        <imput type="submit" value="Greetings!">
+
+</form>
+
+</html>
 
 
 
-    <p>Hello, {{ name }}!</p>
-    <form action="/greet" id="greet" method="post">
-        <label for="name">Box here</label>
-        <imput name="name" id="name">
-        <imput type="submit" value="Greetings!"
-    </form>
-
-{% endblock %}
-
-<!- This is turning off birds background from base.html -->
-{% block background %}
-{% endblock %}

@@ -53,7 +53,7 @@ if __name__ == "__main__":
     app.run(debug=True)
 print("hello")
 
-@app.route('/greet', method=['GET,POST'])
+@app.route('/greet', methods==['GET,POST'])
 def greet():
 
     if request.form:
