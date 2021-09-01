@@ -1,5 +1,5 @@
 # import "packages" from flask
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 # create a Flask instance
 app = Flask(__name__)
@@ -34,9 +34,15 @@ def hawkers():
 def stub():
     return render_template("stub.html")
 
-@app.route('/simon/')
+@app.route('/simon/', methods=['GET', 'POST'])
 def simon():
-    return render_template("simon.html")
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("simon.html", name1=name)
+    # starting and empty input default
+    return render_template("simon.html", name1="World")
 
 
 @app.route('/leah/')
@@ -48,18 +54,14 @@ def leah():
 def isabella():
     return render_template("isabella.html")
 
+@app.route('/greet', methods=['GET', 'POST'])
+def greet():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("simon.html", name=name)
+    # starting and em
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
-print("hello")
-
-@app.route('/greet', methods==['GET,POST'])
-def greet():
-
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:
-            return render_template("simon.html", name=name)
-
-    return render_template("simon.html, name=World")
-

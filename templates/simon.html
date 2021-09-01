@@ -1,20 +1,28 @@
-<!DOCTYPE html>
-<html>
-<body>
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
 
-<p><b> Simon's Page </b></p>
+<!- This variable sets name of browser tab  -->
+{% set project = "Stubby" %}
 
-</body>
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+        <div class="col-12">
+            <p>Hello, {{name1}}!</p>
+        </div>
+        <div class="col-12">
+            <form action="/simon/" id="simon" method="POST" >
+                <label for="name">Type a greeting name?</label>
+                <input name="name" id="name">
+                <input type="submit" value="Heyyy!">
+            </form>
+        </div>
+        <div class="col-12">
+            <img src="/static/assets/PythonFlask.jpeg" style="height: 400px" >
+        </div>
+    </div>
+{% endblock %}
 
-<p>Hello, {{ name }}!</p>
-<form action="/greet" id="greet" method="post">
-    <label for="name">Box here</label>
-    <imput name="name" id="name">
-        <imput type="submit" value="Greetings!">
-
-</form>
-
-</html>
-
-
-
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}
