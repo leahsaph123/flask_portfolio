@@ -1,0 +1,37 @@
+Index: main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># import \"packages\" from flask\r\nfrom flask import Flask, render_template\r\n\r\n# create a Flask instance\r\napp = Flask(__name__)\r\n\r\n\r\n# connects default URL to render index.html\r\n@app.route('/')\r\ndef index():\r\n    print(\"hello\")\r\n    for i in range(0,70):\r\n        print(\"hi :3 {}\".format(i))\r\n    return render_template(\"index.html\")\r\n\r\n\r\n# connects /kangaroos path to render kangaroos.html\r\n@app.route('/kangaroos/')\r\ndef kangaroos():\r\n    return render_template(\"kangaroos.html\")\r\n\r\n\r\n@app.route('/walruses/')\r\ndef walruses():\r\n    return render_template(\"walruses.html\")\r\n\r\n\r\n@app.route('/hawkers/')\r\ndef hawkers():\r\n    return render_template(\"hawkers.html\")\r\n\r\n\r\n@app.route('/stub/')\r\ndef stub():\r\n    return render_template(\"stub.html\")\r\n\r\n@app.route('/simon/')\r\ndef simon():\r\n    return render_template(\"simon.html\")\r\n\r\n\r\n@app.route('/leah/')\r\ndef leah():\r\n    return render_template(\"leah.html\")\r\n\r\n\r\n@app.route('/isabella/')\r\ndef isabella():\r\n    return render_template(\"isabella.html\")\r\n\r\n# runs the application on the development server\r\nif __name__ == \"__main__\":\r\n    app.run(debug=True)\r\nprint(\"hello\")
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.py b/main.py
+--- a/main.py	(revision f93bce62b8ab33f5baec4d3d65c55d6deea3dacf)
++++ b/main.py	(date 1630359045781)
+@@ -51,4 +51,3 @@
+ # runs the application on the development server
+ if __name__ == "__main__":
+     app.run(debug=True)
+-print("hello")
+\ No newline at end of file
+Index: templates/layouts/Tigran.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/layouts/Tigran.html b/templates/layouts/Tigran.html
+new file mode 100644
+--- /dev/null	(date 1630532443371)
++++ b/templates/layouts/Tigran.html	(date 1630532443371)
+@@ -0,0 +1,10 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>Tigran</title>
++</head>
++<body>
++
++</body>
++</html>
+\ No newline at end of file
