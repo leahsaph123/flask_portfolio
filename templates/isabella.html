@@ -1,26 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>isabella</title>
-</head>
-<body>
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
 
-<div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
-    <div class="col-12">
-        <p>helloo {{name}}!</p>
+<!- This variable sets name of browser tab  -->
+{% set project = "Stubby" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+        <div class="col-12">
+            <p>helloo {{name}}!</p>
+        </div>
+        <div class="col-12">
+            <form action="/isabella" id="greet" method="POST" >
+                <label for="name">what's ur name :3</label>
+                <input name="name" id="name">
+                <input type="submit" value="hiiii!!">
+            </form>
+        </div>
+        <div class="col-12">
+            <img src="/static/assets/smiley_face.jpeg" style="height: 400px" >
+        </div>
     </div>
-    <div class="col-12">
-        <form action="/isabella" id="greet" method="POST" >
-            <label for="name">what's ur name :3</label>
-            <input name="name" id="name">
-            <input type="submit" value="hiiii!!">
-        </form>
-    </div>
-    <div class="col-12">
-        <img src="/static/assets/smiley_face.jpeg" style="height: 400px" >
-    </div>
-</div>
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}
+
 
 </form>
 </body>
