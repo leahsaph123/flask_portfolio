@@ -34,14 +34,26 @@ def hawkers():
 def stub():
     return render_template("stub.html")
 
-@app.route('/simon/')
+@app.route('/simon', methods=['GET', 'POST'])
 def simon():
-    return render_template("simon.html")
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("simon.html", name=name)
+    # starting and empty input default
+    return render_template("simon.html", name="World")
 
 
-@app.route('/leah/')
+@app.route('/leah', methods=['GET', 'POST'])
 def leah():
-    return render_template("leah.html")
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("leah.html", name=name)
+    # starting and empty input default
+    return render_template("leah.html", name="World")
 
 @app.route('/Tigran', methods=['GET', 'POST'])
 def Tigran():
@@ -53,12 +65,8 @@ def Tigran():
     # starting and empty input default
     return render_template("Tigran.html", name="World")
 
-@app.route('/isabella/')
+@app.route('/isabella', methods=['GET', 'POST'])
 def isabella():
-    return render_template("isabella.html")
-
-@app.route('/greet', methods=['GET', 'POST'])
-def greet():
     # submit button has been pushed
     if request.form:
         name = request.form.get("name")
