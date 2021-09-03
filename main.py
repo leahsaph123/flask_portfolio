@@ -40,9 +40,9 @@ def simon():
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("simon.html", name=name)
+            return render_template("simon.html", name1=name)
     # starting and empty input default
-    return render_template("simon.html", name="World")
+    return render_template("simon.html", name1="World")
 
 
 @app.route('/leah', methods=['GET', 'POST'])
@@ -51,9 +51,9 @@ def leah():
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("leah.html", name=name)
+            return render_template("leah.html", name1=name)
     # starting and empty input default
-    return render_template("leah.html", name="World")
+    return render_template("leah.html", name1="World")
 
 @app.route('/Tigran', methods=['GET', 'POST'])
 def Tigran():
