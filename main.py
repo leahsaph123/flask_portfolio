@@ -34,6 +34,12 @@ def hawkers():
 def stub():
     return render_template("stub.html")
 
+
+
+@app.route('/minilab/')
+def minilab():
+    return render_template("minilab.html")
+
 @app.route('/simon', methods=['GET', 'POST'])
 def simon():
     # submit button has been pushed
@@ -83,7 +89,12 @@ def isabella():
         if len(name) != 0:  # input field has content
             return render_template("isabella.html", name=name)
     # starting and empty input default
-    return render_template("isabella.html", name="World")
+    return render_template("isabella.html", name="world")
+
+@app.route('/binary/')
+def binary():
+    return render_template("binary.html")
+
 
 # runs the application on the development server
 if __name__ == "__main__":
