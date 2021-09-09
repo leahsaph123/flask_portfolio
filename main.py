@@ -77,7 +77,7 @@ def isabella():
         if len(name) != 0:  # input field has content
             return render_template("isabella.html", name=name)
     # starting and empty input default
-    return render_template("isabella.html", name="World")
+    return render_template("isabella.html", name="world")
 
 # runs the application on the development server
 if __name__ == "__main__":
