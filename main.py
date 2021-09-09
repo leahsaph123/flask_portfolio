@@ -34,9 +34,9 @@ def hawkers():
 def stub():
     return render_template("stub.html")
 
-@app.route('/embeds/')
-def embeds():
-    return render_template("embeds.html")
+@app.route('/minilab/')
+def minilab():
+    return render_template("minilab.html")
 
 @app.route('/simon', methods=['GET', 'POST'])
 def simon():
