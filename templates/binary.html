@@ -6,7 +6,7 @@
 </head>
 <body>
 <!DOCTYPE html>
-{% extends "layout.html" %}
+{% extends "layouts/base.html" %}
 
 <!-- Search for all the Hack: below for hack-a-thon and mini-lab requirements -->
 <!-- need to adjust Templates to start -->
@@ -51,6 +51,7 @@
              DOM assignment by converting decimal https://www.w3schools.com/jsref/jsref_fromcharcode.asp
              below ASCII for more ideas of where to make changes
              */
+            document.getElementById('ASCII').innerHTML = parseInt(binary, 2).toString(16);
         }
 
         // algorithm to convert decimal to base using division and remainder
