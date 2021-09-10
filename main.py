@@ -35,11 +35,6 @@ def stub():
     return render_template("stub.html")
 
 
-
-@app.route('/minilab/')
-def minilab():
-    return render_template("minilab.html")
-
 @app.route('/simon', methods=['GET', 'POST'])
 def simon():
     # submit button has been pushed
