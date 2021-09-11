@@ -14,6 +14,7 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 ### scrumboard link: https://github.com/leahsaph123/flask_portfolio/projects/1
 ### Mini lab page and it's progress: http://127.0.0.1:5000/minilab/
 ### Drop down menu and it's progress: https://github.com/leahsaph123/flask_portfolio/blob/main/templates/layouts/navbar2.html
+### Customization done to better reflect our Wire-framing https://github.com/leahsaph123/flask_portfolio/commit/43153920b37ef8a0e1bb0cff3c9990167d8819d8
 ## Video for this week: https://www.loom.com/share/1183c0fdf91d429882d5cc4170678371
 ### Changes made to about us pages:
 #### Isabella: picture
