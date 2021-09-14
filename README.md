@@ -29,5 +29,5 @@ Isabella | [About Isabella](http://127.0.0.1:5000/isabella)
 Tigran | [About Tigran](http://127.0.0.1:5000/Tigran)
 Simon | [About Simon](http://127.0.0.1:5000/simon)
 Wireframes/Minilab Page | [Minilab](http://127.0.0.1:5000/minilab)
-Binary | Notes found in journals
+Binary | Notes found in journals under [credits](#credits)
 Video | https://www.loom.com/share/1183c0fdf91d429882d5cc4170678371
