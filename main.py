@@ -86,13 +86,17 @@ def isabella():
     # starting and empty input default
     return render_template("isabella.html", name="world")
 
-@app.route('/binary/')
+@app.route('/binary/', methods=['GET', 'POST'])
 def binary():
+    if request.form:
+        num = int(request.form.get("number"))
+        if  num >= 0 and num <= 255:  # input field has content
+            return render_template("binary.html", number1=num)
     return render_template("binary.html")
 
 
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
-print("hello")
+
 
