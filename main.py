@@ -94,6 +94,9 @@ def binary():
             return render_template("binary.html", number1=num)
     return render_template("binary.html")
 
+@app.route('/rgb/')
+def rgb():
+    return render_template("rgb.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
