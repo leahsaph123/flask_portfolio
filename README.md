@@ -23,7 +23,9 @@ Requirements | Evidence
 ----------- | ----------- 
 onclick event | [click](http://127.0.0.1:5000/leah)
 transitions | [thumbs up](http://127.0.0.1:5000/simon)
+animations | [cloud](http://127.0.0.1:5000/isabella)
 adding ascii into binary | [binary](http://127.0.0.1:5000/binary/)
+video | [video week 4](
 
 Week 3 
 =====
