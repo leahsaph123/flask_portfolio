@@ -34,6 +34,10 @@ def hawkers():
 def stub():
     return render_template("stub.html")
 
+@app.route('/rbg/')
+def rbg():
+    return render_template("rbg.html")
+
 
 @app.route('/simon', methods=['GET', 'POST'])
 def simon():

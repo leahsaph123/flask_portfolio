@@ -51,7 +51,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    {% for row in image.data[:256+1] %}
+                                    {% for row in image.data[:256:+1] %}
                                         <tr>
                                             <td>{{loop.index}}</td>
                                             <td>{{row}}</td>
@@ -73,10 +73,12 @@
 
         </div>
     </div>
+    <!- This is turning off birds background from base.html -->
+    {% block background %}
 {% endblock %}
 
-<!- This is turning off birds background from base.html -->
-{% block background %}
 {% endblock %}
+
+
 
 
