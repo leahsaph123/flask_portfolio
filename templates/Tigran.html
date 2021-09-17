@@ -7,22 +7,37 @@
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
 
+
+    <!-- Title, centered and font increased -->
+   <center>
+       <p>
+              <font>
+                         <font size="10">  Tigran's Page
+              </font>
+        </p>
+   </center>
+
+    <!-- Hello World -->
     <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
         <div class="col-12">
             <p>Hello, {{name}}!</p>
         </div>
 
+      <!-- Enter your name/greetings bar -->
         <div class="col-12">
             <form action="/Tigran" id="Tigran" method="POST" >
-                <label for="name">Type a greeting name?</label>
+                <label for="name">What is your name?</label>
                 <input name="name" id="name">
                 <input type="submit" value="Greetings!">
             </form>
         </div>
 
-        <a> /*  <a href="https://docs.google.com/document/d/1ZmRTWw3wAjc18To9BVckSW1Xj8Yx1AtsTPls_FIshU8/edit">Visit Tigran's Notes </>
+        <!-- Link to my notes-->
+        <a>   <a href="https://docs.google.com/document/d/1ZmRTWw3wAjc18To9BVckSW1Xj8Yx1AtsTPls_FIshU8/edit">Visit Tigran's Notes </>
 
-        <style>  /* Background Color */
+
+            <!-- Background color-->
+        <style>
             body {
                 background-color: lightblue;
             }  </style>
