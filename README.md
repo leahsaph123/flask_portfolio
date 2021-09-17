@@ -3,6 +3,7 @@ Table of Contents
 
   * [Credits](#credits)
   * [Week 3](#week-3)
+  * [Week 4](#week-4)
 
 Credits
 =====
@@ -14,6 +15,15 @@ Isabella Yan | [@yqw7](https://github.com/yqw7) | [Commits](https://github.com/l
 Tigran Arakelov | [@Tigran7](https://github.com/Tigran7) | [Commits](https://github.com/leahsaph123/flask_portfolio/commits?author=Tigran7) | [Tasks](https://github.com/leahsaph123/flask_portfolio/projects/1?card_filter_query=assignee%3Atigran7) | [Scrumboard](https://github.com/leahsaph123/flask_portfolio/projects/1) | [Tigran Arakelov and Simon Brunzell Journal](https://docs.google.com/document/d/1ZmRTWw3wAjc18To9BVckSW1Xj8Yx1AtsTPls_FIshU8/edit?usp=sharing) 
 Simon Brunzell | [@SimonBrunzell](https://github.com/SimonBrunzell) | [Commits](https://github.com/leahsaph123/flask_portfolio/commits?author=SimonBrunzell) | [Tasks](https://github.com/leahsaph123/flask_portfolio/projects/1?card_filter_query=assignee%3Asimonbrunzell) | [Scrumboard](https://github.com/leahsaph123/flask_portfolio/projects/1) | [Tigran Arakelov and Simon Brunzell Journal](https://docs.google.com/document/d/1ZmRTWw3wAjc18To9BVckSW1Xj8Yx1AtsTPls_FIshU8/edit?usp=sharing)
 
+Week 4
+====
+9/13 - 9/17
+
+Requirements | Evidence 
+----------- | ----------- 
+onclick event | [click](http://127.0.0.1:5000/leah)
+transitions | [thumbs up](http://127.0.0.1:5000/simon)
+adding ascii into binary | [binary](http://127.0.0.1:5000/binary/)
 
 Week 3 
 =====
