@@ -17,6 +17,22 @@
                 <input name="name" id="name">
                 <input type="submit" value="hiiii!!">
             </form>
+            <a class="cloud" href="#">
+                <img class="cloud-img img-flex" src="https://www.freepnglogos.com/uploads/cloud-png/real-cloud-picture-8.png" alt="" width="400" height="200">
+            </a>
+            <style>
+                .cloud {
+                    position: relative;
+                    animation-name: cloud;
+                    animation-duration: 8s;
+                }
+
+                @keyframes cloud {
+                    0%   {.cloud-img; left:0px; top:0px;}
+                    50%  {.cloud-img; left:1500px; top:-100px;}
+                    100% {.cloud-img; left:0px; top:0px;}
+                }
+            </style>
 
             <style>
                 p {font-size: 20px;color:darkgreen;}
