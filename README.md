@@ -23,9 +23,9 @@ Requirements | Evidence
 ----------- | ----------- 
 onclick event | [click](http://127.0.0.1:5000/leah)
 transitions | [thumbs up](http://127.0.0.1:5000/simon)
-animations | [cloud](http://127.0.0.1:5000/isabella)
+animations | [cloud](http://127.0.0.1:5000/isabella) and [desktop](http://127.0.0.1:5000/Tigran)
 adding ascii into binary | [binary](http://127.0.0.1:5000/binary/)
-video | [video week 4](
+video | [video week 4](https://www.loom.com/share/f66b44d7fa2a4063a5e16b1ca6847bdc)
 
 Week 3 
 =====
