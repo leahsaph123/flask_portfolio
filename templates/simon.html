@@ -21,10 +21,21 @@
 
 
             <style>
-                p {font-size: 25px; color:darkgreen; }
+
+                * {font-size: 25px;
+                    animation-name:rainbow;
+                    animation-duration:3.5s;
+                    color:darkgreen; }
+
+               @keyframes rainbow {
+                   from {color:#cedec4}
+                   to {color:darkgreen}
+               }
+
             #simon {font-size: 25px; color:darkgreen; }
              p.fun {font-size: 25px;color:darkgreen;text-align: center;}
             body {background-color:#cedec4}
+
             </style>
 
             <br>
@@ -49,7 +60,7 @@
                 div.thumb:hover { width: 300px;
                     height: 210px;
                     transform: rotateY(150deg);
-
+                    transition: width 1s, height 1s, transform 1s;
 
             </style>
 
