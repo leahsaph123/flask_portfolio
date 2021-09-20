@@ -15,6 +15,18 @@ Isabella Yan | [@yqw7](https://github.com/yqw7) | [Commits](https://github.com/l
 Tigran Arakelov | [@Tigran7](https://github.com/Tigran7) | [Commits](https://github.com/leahsaph123/flask_portfolio/commits?author=Tigran7) | [Tasks](https://github.com/leahsaph123/flask_portfolio/projects/1?card_filter_query=assignee%3Atigran7) | [Scrumboard](https://github.com/leahsaph123/flask_portfolio/projects/1) | [Tigran Arakelov and Simon Brunzell Journal](https://docs.google.com/document/d/1ZmRTWw3wAjc18To9BVckSW1Xj8Yx1AtsTPls_FIshU8/edit?usp=sharing) 
 Simon Brunzell | [@SimonBrunzell](https://github.com/SimonBrunzell) | [Commits](https://github.com/leahsaph123/flask_portfolio/commits?author=SimonBrunzell) | [Tasks](https://github.com/leahsaph123/flask_portfolio/projects/1?card_filter_query=assignee%3Asimonbrunzell) | [Scrumboard](https://github.com/leahsaph123/flask_portfolio/projects/1) | [Tigran Arakelov and Simon Brunzell Journal](https://docs.google.com/document/d/1ZmRTWw3wAjc18To9BVckSW1Xj8Yx1AtsTPls_FIshU8/edit?usp=sharing)
 
+Week 5
+====
+9/20-9/24
+
+Assignee | Requirements | Evidence
+----------- | ----------- | -----------
+Leah | RGB Values with an Image, Backend... how would you write a message into image (Links to an external site.) and transport it to the Web? Look at Pillow Image write in Tester. | ticket and link/screenshot
+Isabella | RGB Values with an Image, Backend... image files are really big, this would make a Programmer consider being efficiency in programming. What are the calculations? Could the image.py function "def image_data" more efficient? There is a science to writing efficient algorithms called Big O notation (Links to an external site.). Write image_data function to be more efficient according to Big O notation. | ticket 
+Simon | RGB Values with an Image, New Development. explore and implement a new possibility in manipulating images | ticket and proof
+Tigran | RGB Values with an Image, Frontend... how would you change to grey scale dynamically? Look for Hack in code. | ticket and proof
+
+video: 
 Week 4
 ====
 9/13 - 9/17
