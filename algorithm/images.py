@@ -1,4 +1,5 @@
 from PIL import Image, ImageDraw
+import requests
 import numpy
 import base64
 from io import BytesIO
@@ -20,16 +21,16 @@ def image_formatter(img, img_type):
 def image_data(path="static/img/", img_list=None):  # path of static images is defaulted
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
-
             {'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png"},
             {'label': "ateez", 'file': "ateez.jpg"}
         ]
     # gather analysis data and meta data for each image, adding attributes to each row in table
     for img_dict in img_list:
         img_dict['path'] = '/' + path  # path for HTML access (frontend)
-        file = path + img_dict['file']  # file with path for local access (backend)
+        file = "http://127.0.0.1:5000/"+path + img_dict['file']  # file with path for local access (backend)
+        response = requests.get(file)
         # Python Image Library operations
-        img_reference = Image.open(file)  # PIL
+        img_reference = Image.open(BytesIO(response.content))  # PIL
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
         img_dict['format'] = img_reference.format
         img_dict['mode'] = img_reference.mode
