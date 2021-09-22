@@ -1,5 +1,6 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
+from algorithm.images import image_data
 
 # create a Flask instance
 app = Flask(__name__)
@@ -98,9 +99,10 @@ def binary():
             return render_template("binary.html", number1=num)
     return render_template("binary.html")
 
-@app.route('/rgb/')
+@app.route('/rgb/', methods=["GET", "POST"])
 def rgb():
-    return render_template("rgb.html")
+    print(image_data())
+    return render_template('rgb.html', images=image_data())
 
 
 # runs the application on the development server
