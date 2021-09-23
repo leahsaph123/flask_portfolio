@@ -11,7 +11,7 @@
     <!-- Title, centered and font increased -->
    <center>
               <style>
-                  p1 {color:darkgreen;}
+                  p1 {color:black;}
                   p1 {font-size: 40px}
               </style>
        <p1 style="font-family:Fantasy;"> Tigran's Page</p1>
@@ -25,17 +25,6 @@
 
         </div>
 
-        <!-- W3 Schools image with link-moving right to left  -->
-        <a href="https://www.w3schools.com/html/html_images.asp">
-            <div class="move">
-                <style>
-
-                    div.move {transform: translate(800px, 0px);}
-
-                </style>
-            <img src="https://th.bing.com/th/id/R.2e924d7ce5c71ca245c51a89990dc37b?rik=D7jl8u0oQ%2fS01w&pid=ImgRaw&r=0" alt="Coder" style="width:550px;height:400px;">
-        </a>
-    </div>
       <!-- Enter your name/greetings bar -->
         <div class="col-12">
             <form action="/Tigran" id="Tigran" method="POST" >
@@ -48,12 +37,26 @@
         <!-- Link to my notes-->
         <a>   <a href="https://docs.google.com/document/d/1ZmRTWw3wAjc18To9BVckSW1Xj8Yx1AtsTPls_FIshU8/edit">Visit Tigran's Notes </>
 
+            <!-- W3 Schools image with link-moving right to left  -->
+            <a href="https://www.w3schools.com/html/html_images.asp">
+                <div class="move">
+                    <style>
+
+                        div.move {transform: translate(0px, 0px);}
+
+                    </style>
+                    <marquee>
+                    <img src="https://th.bing.com/th/id/OIP.UKSgNYwV1GOgunvCMwC24QHaE8?pid=ImgDet&rs=1" alt="Coder" style="width:550px;height:400px;"></marquee>
+            </a>
+    </div>
 
             <!-- Background color-->
         <style>
-            body {
-                background-color: lightblue;
-            }  </style>
+
+            div {
+                background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+            }
+        </style>
 
     </div>
 {% endblock %}
