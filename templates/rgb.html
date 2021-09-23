@@ -32,6 +32,12 @@
                             <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
                             <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
                         </td>
+                        <button onclick="myFunction()">grayscale</button><br><br>
+                        <script>
+                            function myFunction() {
+                                document.body.style.filter= "grayscale(100%";
+                            }
+                        </script>
                         <td>
                             <div class="overflow-auto" style="height: 256px">
                                 <table class="table">
