@@ -52,10 +52,19 @@
                             <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
                             <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
                         </td>
-                        <button onclick="myFunction()">grayscale</button><br><br>
+                        <button onclick="myFunction()">grayscale</button>
+                        <br>
+                        <br>
                         <script>
+                            let grayscale = 0
                             function myFunction() {
-                                document.body.style.filter= "grayscale(100%";
+                                if (grayscale === 0 ) {
+                                    document.body.style.filter = "grayscale(100%)";
+                                    grayscale = 100
+                                } else if (grayscale === 100 ) {
+                                    document.body.style.filter = "grayscale(0%)";
+                                    grayscale = 0
+                                }
                             }
                         </script>
                         <td>
