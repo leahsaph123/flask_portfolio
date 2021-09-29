@@ -18,8 +18,8 @@ def image_formatter(img, img_type):
 
 
 # color_data prepares a series of images for data analysis
-def image_data(path="static/img/", img_list=None):  # path of static images is defaulted
-    if img_list is None:  # color_dict is defined with defaults
+def image_data(path="static/img/", img_list=None):  # path of static images is defaulted O(N)
+    if img_list is None:  # color_dict is defined with defaults O(N)
         img_list = [
             {'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png"},
             {'label': "pretty boys", 'file': "ateez.jpg"}
