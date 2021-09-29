@@ -1,0 +1,56 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Stubby" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+
+    <style>
+
+        h4{color:green}
+        A:link {text-decoration:none }
+        A:visited {text-decoration:none }
+        A:active {text-decoration:none }
+        A:hover {text-decoration:none }
+
+        h1,h2{font-size: 25px; color:darkgreen; text-align:center;font-family: "Lucida Handwriting", Fantasy }
+        body {background-color:#cedec4}
+
+
+        div.sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            padding: 5px;}
+
+    </style>
+
+    <br>
+
+    <div class="sticky">
+        <h1> Welcome to your meditation page </h1>
+        <h2>Sit back relax and relax</h2>
+    </div>
+
+    <br>
+<div class="meds" style="text-align: center">
+    <iframe width="450" height="300" src="https://www.youtube.com/embed/4ei0zNu-6HQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+    <iframe width="450" height="300" src="https://www.youtube.com/embed/tVuaPQ_WC-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+    <iframe width="450" height="300" src="https://www.youtube.com/embed/idCyS-DRX8Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <br>
+
+    <iframe width="450" height="300" src="https://www.youtube.com/embed/3X4uA-ANtxU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}
