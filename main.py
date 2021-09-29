@@ -39,6 +39,9 @@ def stub():
 def rbg():
     return render_template("rbg.html")
 
+@app.route('/meditation/')
+def meditation():
+    return render_template("meditation.html")
 
 @app.route('/simon', methods=['GET', 'POST'])
 def simon():
