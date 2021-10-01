@@ -26,15 +26,18 @@
 
         div.meds
         {animation-name:bounce;
-        animation-duration: 4s;}
+        animation-duration: 2s;
+            animation-delay: .9s;}
 
         @keyframes bounce{
-            30% {transform: rotate(-6deg)}
-            50% {transform: rotate(3deg)}
-            70% {transform: rotate(-2deg)}
-            90% {transform: rotate(1deg)}
-        }
+            50% {transform: rotate(-2deg)}
+            100% {transform: rotate(1deg)} }
 
+        .flex-container {display: flex;}
+
+        .flex-container > div {
+            padding: 20px;
+            font-size: 30px;}
 
     </style>
 
@@ -47,19 +50,33 @@
 
     <br> <br>
 
-<div class="meds" style="text-align: center">
-    <iframe width="450" height="300" src="https://www.youtube.com/embed/4ei0zNu-6HQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- This flex container is a row containing all of the swinging meditations-->
+    <div class="flex-container">
 
+        <div>
+            <div class="meds">
+            <iframe width="450" height="300" src="https://www.youtube.com/embed/4ei0zNu-6HQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
 
-    <iframe width="450" height="300" src="https://www.youtube.com/embed/tVuaPQ_WC-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div>
+            <div class="meds" style="text-align: center">
+                <iframe width="450" height="300" src="https://www.youtube.com/embed/tVuaPQ_WC-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
 
+        <div>
+            <div class="meds" style="text-align:right">
+                <iframe width="450" height="300" src="https://www.youtube.com/embed/idCyS-DRX8Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
 
-    <iframe width="450" height="300" src="https://www.youtube.com/embed/idCyS-DRX8Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
 
-    <br>
-
+<!-- This is not apart of the row above -->
+    <div class="meds" style="text-align: left">
     <iframe width="450" height="300" src="https://www.youtube.com/embed/3X4uA-ANtxU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+    </div>
 
 {% endblock %}
 
