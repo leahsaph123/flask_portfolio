@@ -23,7 +23,7 @@ Assignee | Requirements | Evidence
 ----------- | ----------- | -----------
 Tigran | RGB Values with an Image, Backend... how would you write a message into image (Links to an external site.) and transport it to the Web? Look at Pillow Image write in Tester. | ticket and link/screenshot
 Leah | RGB Values with an Image, Backend... image files are really big, this would make a Programmer consider being efficiency in programming. What are the calculations? Could the image.py function "def image_data" more efficient? There is a science to writing efficient algorithms called Big O notation (Links to an external site.). Write image_data function to be more efficient according to Big O notation. | ticket 
-Simon | RGB Values with an Image, New Development. explore and implement a new possibility in manipulating images [ticket](https://github.com/leahsaph123/flask_portfolio/commit/3e4fa5492cbc498cc16813c26db6bfaf653b977b) and [proof](http://127.0.0.1:5000/rgb/)
+Simon | RGB Values with an Image, New Development. explore and implement a new possibility in manipulating images. | [ticket](https://github.com/leahsaph123/flask_portfolio/commit/3e4fa5492cbc498cc16813c26db6bfaf653b977b) and [proof](http://127.0.0.1:5000/rgb/)
 Isabella | RGB Values with an Image, Frontend... how would you change to grey scale dynamically? Look for Hack in code. | [ticket](https://github.com/leahsaph123/flask_portfolio/issues/42) and [proof](http://127.0.0.1:5000/rgb/)
 
 video: 
