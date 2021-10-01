@@ -4,6 +4,7 @@ Table of Contents
   * [Credits](#credits)
   * [Week 3](#week-3)
   * [Week 4](#week-4)
+  * [Week 6](#week-5-and-week-6)
 
 Credits
 =====
