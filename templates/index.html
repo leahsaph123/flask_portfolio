@@ -1,7 +1,23 @@
 <!-- Extending the project layout, as this file will do minor customizations -->
 {% extends "layouts/base.html" %}
 
-<!-- Setting up variables to customize "project" details to be specific to index page -->
-{% set project = "Portfolio" %}
-{% set overview = "https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter" %}
-{% set repo = "https://github.com/nighthawkcoders/flask_portfolio/" %}
+<!-- Setting up variables to customize "project" details to be specific to hawkers -->
+{% set project = "dreamzzz" %}
+
+<!-- Setting up a block replacement to customize background to BIRDS -->
+{% block body %}
+    <p class="quote"> Quote of the Day: {{ quote }} </p>
+    <script>
+    function quote(){
+
+    }
+
+    </script>
+
+
+
+     <style>
+     p.quote {align-text: center}
+     </style>
+
+{% endblock %}

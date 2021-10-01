@@ -7,41 +7,38 @@
 <!-- Setting up a block replacement to customize background to BIRDS -->
 {% block body %}
     <p>Articles About Mental Health</p>
-    <div class="row">
+    <div class="container rounded">
+    <div class="row g-1">
         <div class="col">
-            <p>Mindfulness</p>
+            <div class="p-3 border bg-light">Mindfulness</div>
         </div>
         <div class="col">
-            <p> link article here</p>
+            <div class="p-3 border bg-light">Mindfulness</div>
         </div>
         <div class="col">
-            <p> link article here</p>
-        </div>
-
-        <div class="w-100"></div>
-
-        <div class="col">
-            <p> Stress Relief</p>
-        </div>
-
-        <div class="col">
-            <p>link article here</p>
-        </div>
-        <div class="col">
-            <p> link article here</p>
+            <div class="p-3 border bg-light">Mindfulness</div>
         </div>
     </div>
-    <img src="..." alt="..." class="rounded">
-    <img src="..." alt="..." class="rounded-top">
-    <img src="..." alt="..." class="rounded-right">
-    <img src="..." alt="..." class="rounded-bottom">
-    <img src="..." alt="..." class="rounded-left">
-    <img src="..." alt="..." class="rounded-circle">
-    <img src="..." alt="..." class="rounded-0">
+
+        <div class="w-100"></div>
+    <div class="row g-1">
+        <div class="col">
+            <div class="p-3 border bg-light">Mindfulness</div>
+        </div>
+
+        <div class="col">
+            <div class="p-3 border bg-light">Mindfulness</div>
+        </div>
+        <div class="col">
+            <div class="p-3 border bg-light">Mindfulness</div>
+        </div>
+    </div>
+    </div>
+
     <style>
         p {font-size: 20px;color:darkgreen; text-align: center}
         body {background-color:#cedec4}
-        .col {background-color: #e9ede6; text-align: center}
+        .col {background-color: #e9ede6; text-align: center; border-style: solid; border-color: #e9ede6}
         #greet {font-size: 20px;color:darkgreen;}
     </style>
 {% endblock %}
