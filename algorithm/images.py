@@ -30,7 +30,7 @@ def image_data(path=Path("static/img/"), img_list=None):  # path of static image
         img_reference = Image.open(file)
         title_font = ImageFont.truetype('arial.ttf', 200)
         image_editable = ImageDraw.Draw(img_reference)
-        image_editable.text((15,15), "This is Stan Ateez", (237, 230, 211), font=title_font)
+        image_editable.text((125,130), "Ateez", (100,75,80), font=title_font)
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
         img_dict['format'] = img_reference.format
         img_dict['mode'] = img_reference.mode
