@@ -19,8 +19,7 @@ def image_formatter(img, img_type):
 
 # color_data prepares a series of images for data analysis
 def image_data(path="static/img/", img_list=None):  # path of static images is defaulted O(N)
-    if img_list is None:  # color_dict is defined with defaults O(N)
-        img_list = [
+    img_list = [
             {'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png"},
             {'label': "pretty boys", 'file': "ateez.jpg"}
         ]
@@ -51,15 +50,7 @@ def image_data(path="static/img/", img_list=None):  # path of static images is d
             bin_value = bin(pixel[0])[2:].zfill(8) + " " + bin(pixel[1])[2:].zfill(8) + " " + bin(pixel[2])[2:].zfill(8)
             img_dict['binary_array'].append(bin_value)
         # create gray scale of image, ref: https://www.geeksforgeeks.org/convert-a-numpy-array-to-an-image/
-        img_dict['gray_data'] = []
-        for pixel in img_dict['data']:
-            average = (pixel[0] + pixel[1] + pixel[2]) // 3
-            if len(pixel) > 3:
-                img_dict['gray_data'].append((average, average, average, pixel[3]))
-            else:
-                img_dict['gray_data'].append((average, average, average))
-        img_reference.putdata(img_dict['gray_data'])
-        img_dict['base64_GRAY'] = image_formatter(img_reference, img_dict['format'])
+
     return img_list  # list is returned with all the attributes for each image dictionary
 
 
