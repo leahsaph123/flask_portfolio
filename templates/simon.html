@@ -24,7 +24,7 @@
 
                 p, #simon,.col-12 {font-size: 25px;
                     animation-name:fadein;
-                    animation-duration:3.5s;
+                    animation-duration:4s;
                     color:darkgreen; }
 
                @keyframes fadein {
@@ -60,10 +60,9 @@
             A:active {text-decoration:none }
             A:hover {text-decoration:none }
 
-                thumb:hover { width: 300px;
-                    height: 210px;
-                    transform: rotateY(150deg);
-                    transition: width 1s, height 1s, transform 1s;}
+                thumb:hover
+                {transform: rotateY(150deg);
+                    transition: transform 1s;}
 
             </style>
 
@@ -73,14 +72,11 @@
             <h4 class="fun">#ad </h4>
             </a>
 
-         <div class="thumb">
+         <div class="thumb" style="width:250px" >
             <a href="https://docs.google.com/document/d/1ZmRTWw3wAjc18To9BVckSW1Xj8Yx1AtsTPls_FIshU8/edit ">
                 <embed type="image/jpg" src="https://freesvg.org/img/Thumbs-Up-Silhouette.png" width="200" height="200"> </a>
+             <p> this nifty picture links my notes</p>
          </div>
-
-
-    <p> this nifty picture links my notes</p>
-
 
 
 {% endblock %}

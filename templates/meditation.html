@@ -9,6 +9,7 @@
 
     <style>
 
+        /** This makes links not weird **/
         h4{color:green}
         A:link {text-decoration:none }
         A:visited {text-decoration:none }
@@ -18,23 +19,39 @@
         h1,h2{font-size: 25px; color:darkgreen; text-align:center;font-family: "Lucida Handwriting", Fantasy }
         body {background-color:#cedec4}
 
+    /** Fades in text **/
+        h1, h2 {font-size: 25px;
+            animation-name:fadein;
+            animation-duration:11s;
+            color:darkgreen; }
+
+        /** fade in pt.2**/
+        @keyframes fadein {
+            from {color:#cedec4}
+            to {color:darkgreen} }
+
+        /** Makes the header follow you as you scroll**/
         div.sticky {
             position: -webkit-sticky;
             position: sticky;
             top: 0;
             padding: 5px;}
 
+        /** Makes the videos swing **/
         div.meds
         {animation-name:bounce;
         animation-duration: 2s;
             animation-delay: .9s;}
 
+        /** vid swings pt.2 **/
         @keyframes bounce{
             50% {transform: rotate(-2deg)}
             100% {transform: rotate(1deg)} }
 
+        /** Puts the videos in a row**/
         .flex-container {display: flex;}
 
+        /** Vid row pt.2 **/
         .flex-container > div {
             padding: 20px;
             font-size: 30px;}
@@ -60,19 +77,24 @@
         </div>
 
         <div>
-            <div class="meds" style="text-align:center">
+            <div class="meds" >
                 <iframe width="450" height="300" src="https://www.youtube.com/embed/tVuaPQ_WC-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
 
         <div>
-            <div class="meds" style="text-align:right">
+            <div class="meds">
                 <iframe width="450" height="300" src="https://www.youtube.com/embed/idCyS-DRX8Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
 
+    </div>
+
+<!-- Second row of meditation videos-->
+    <div class="flex-container" style="text-align:center">
+
         <div>
-            <div class="meds" style="text-align:left">
+            <div class="meds">
                 <iframe width="450" height="300" src="https://www.youtube.com/embed/3X4uA-ANtxU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
