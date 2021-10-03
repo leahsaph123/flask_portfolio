@@ -41,13 +41,17 @@
         /** Makes the videos swing **/
         div.meds
         {animation-name:bounce;
-        animation-duration: 2s;
+        animation-duration: 3.5s;
             animation-delay: .9s;}
 
-        /** vid swings pt.2 **/
+        /** the click at the end is so satisfying  **/
         @keyframes bounce{
-            50% {transform: rotate(-2deg)}
-            100% {transform: rotate(1deg)} }
+            0% {opacity:.1;}
+            20% {transform: rotate(-2deg); opacity:.25 }
+            40% {transform: rotate(1.5deg); opacity:.5 }
+            60% {transform: rotate(-1.5deg); opacity:.75 }
+            100% {transform: rotate(1deg); opacity:1}
+        }
 
         /** Puts the videos in a row**/
         .flex-container {display: flex;}
