@@ -1,9 +1,8 @@
-from PIL import Image, ImageDraw
-import requests
+from PIL import Image, ImageDraw, ImageFont
 import numpy
 import base64
 from io import BytesIO
-
+from pathlib import Path
 
 # image (PNG, JPG) to base64 conversion (string), learn about base64 on wikipedia https://en.wikipedia.org/wiki/Base64
 def image_base64(img, img_type):
@@ -18,18 +17,20 @@ def image_formatter(img, img_type):
 
 
 # color_data prepares a series of images for data analysis
-def image_data(path="static/img/", img_list=None):  # path of static images is defaulted O(N)
-    img_list = [
+def image_data(path=Path("static/img/"), img_list=None):  # path of static images is defaulted
+    if img_list is None:  # color_dict is defined with defaults
+        img_list = [
             {'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png"},
-            {'label': "pretty boys", 'file': "ateez.jpg"}
+            {'label': "pretty boys", 'file': "ateez.jpg",}
         ]
     # gather analysis data and meta data for each image, adding attributes to each row in table
     for img_dict in img_list:
-        img_dict['path'] = '/' + path  # path for HTML access (frontend)
-        file = "http://127.0.0.1:5000/"+path + img_dict['file']  # file with path for local access (backend)
-        response = requests.get(file)
+        file = path / img_dict['file']  # file with path for local access (backend)
         # Python Image Library operations
-        img_reference = Image.open(BytesIO(response.content))  # PIL
+        img_reference = Image.open(file)
+        title_font = ImageFont.truetype('arial.ttf', 200)
+        image_editable = ImageDraw.Draw(img_reference)
+        image_editable.text((125,130), "Ateez", (100,75,80), font=title_font)
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
         img_dict['format'] = img_reference.format
         img_dict['mode'] = img_reference.mode
@@ -50,7 +51,15 @@ def image_data(path="static/img/", img_list=None):  # path of static images is d
             bin_value = bin(pixel[0])[2:].zfill(8) + " " + bin(pixel[1])[2:].zfill(8) + " " + bin(pixel[2])[2:].zfill(8)
             img_dict['binary_array'].append(bin_value)
         # create gray scale of image, ref: https://www.geeksforgeeks.org/convert-a-numpy-array-to-an-image/
-
+        img_dict['gray_data'] = []
+        for pixel in img_dict['data']:
+            average = (pixel[0] + pixel[1] + pixel[2]) // 3
+            if len(pixel) > 3:
+                img_dict['gray_data'].append((average, average, average, pixel[3]))
+            else:
+                img_dict['gray_data'].append((average, average, average))
+        img_reference.putdata(img_dict['gray_data'])
+        img_dict['base64_GRAY'] = image_formatter(img_reference, img_dict['format'])
     return img_list  # list is returned with all the attributes for each image dictionary
 
 
