@@ -22,7 +22,8 @@
 
             <style>
 
-                p, #simon,.col-12 {font-size: 25px;
+            /** Everything that fades in **/
+                p,h4 ,#simon,.col-12{font-size: 25px;
                     animation-name:fadein;
                     animation-duration:4s;
                     color:darkgreen; }
@@ -31,7 +32,7 @@
                    from {color:#cedec4}
                    to {color:darkgreen}
                }
-
+                /** p.fun because greet also uses p **/
             #simon {font-size: 25px; color:darkgreen; }
              p.fun {font-size: 25px;color:darkgreen;text-align: center;}
             body {background-color:#cedec4}
@@ -60,9 +61,16 @@
             A:active {text-decoration:none }
             A:hover {text-decoration:none }
 
-                thumb:hover
-                {transform: rotateY(150deg);
-                    transition: transform 1s;}
+                /** Thumb flip 2.0 **/
+                .thumb:hover{
+                    animation-name:flip;
+                    animation-duration:3.5s;}
+
+                /** don't really follow the math but werk! **/
+                @keyframes flip {
+                    50% {transform:rotateY(180deg)}
+                    100% {transform:rotateY(-360deg)}
+                }
 
             </style>
 
