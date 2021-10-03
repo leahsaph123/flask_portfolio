@@ -11,8 +11,15 @@
             filter: contrast(110%);
             background-color: lightpink;}
 
-        img:hover {
-            transform: scaleX(-1);}
+        img:hover{
+            animation-name:ateezflip;
+            animation-duration:3s;}
+
+        /** don't really follow the math but werk! **/
+        @keyframes ateezflip {
+            50% {transform:rotateY(180deg)}
+            100% {transform:rotateY(-360deg)}
+        }
 
         body {background-color:#cedec4}
 
