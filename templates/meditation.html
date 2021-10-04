@@ -53,7 +53,8 @@
             100% {transform: rotate(1deg); opacity:1}
         }
 
-        /** Puts the videos in a row**/
+        /** {margin:auto;} doesn't work for some reason
+        also the centering needed to be here, not on the second one**/
         .flex-container {display: flex;
             justify-content: center;
             flex-wrap: wrap;}
@@ -61,7 +62,7 @@
         /** Vid row pt.2 **/
         .flex-container > div {
             flex-direction: row;
-            padding: 30px;
+            padding: 60px;
             flex-wrap: wrap;}
 
     </style>
@@ -69,8 +70,8 @@
     <br>
 
     <div class="sticky">
-        <h1> Welcome to your meditation page </h1>
-        <h2>Sit back relax and relax</h2>
+        <h1 style="font-size:35px"> Welcome to your meditation page </h1>
+        <h2 style="font-size:30px">Sit back relax... and relax</h2>
     </div>
 
     <br> <br>
