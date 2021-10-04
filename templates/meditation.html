@@ -39,8 +39,8 @@
             padding: 5px;}
 
         /** Makes the videos swing **/
-        div.meds
-        {animation-name:bounce;
+        div.meds {
+            animation-name:bounce;
         animation-duration: 3.5s;
             animation-delay: .9s;}
 
@@ -54,12 +54,15 @@
         }
 
         /** Puts the videos in a row**/
-        .flex-container {display: flex;}
+        .flex-container {display: flex;
+            justify-content: center;
+            flex-wrap: wrap;}
 
         /** Vid row pt.2 **/
         .flex-container > div {
-            padding: 20px;
-            font-size: 30px;}
+            flex-direction: row;
+            padding: 30px;
+            flex-wrap: wrap;}
 
     </style>
 
@@ -73,7 +76,7 @@
     <br> <br>
 
     <!-- This flex container is a row containing all of the swinging meditations-->
-    <div class="flex-container" style="text-align:center">
+    <div class="flex-container" >
 
         <div>
             <div class="meds">
@@ -93,11 +96,6 @@
             </div>
         </div>
 
-    </div>
-
-<!-- Second row of meditation videos-->
-    <div class="flex-container" style="text-align:center">
-
         <div>
             <div class="meds">
                 <iframe width="450" height="300" src="https://www.youtube.com/embed/3X4uA-ANtxU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -106,8 +104,15 @@
 
     </div>
 
-<!-- This is not apart of the row above -->
-    <div class="meds" style="text-align: left">
+<!-- Second row of meditation videos-->
+    <div class="flex-container" >
+
+
+
+    </div>
+
+<!-- I made it invisible -->
+    <div style="opacity:0">
     <iframe width="450" height="300" src="https://www.youtube.com/embed/3X4uA-ANtxU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
