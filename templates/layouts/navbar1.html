@@ -50,10 +50,18 @@
                     <a class="dropdown-item" href={{ url_for('isabella') }}>isabella</a>
                     <a class="dropdown-item" href={{ url_for('leah') }}>leah</a>
                     <a class="dropdown-item" href={{ url_for('Tigran') }}>tigran</a>
-                    <a class="dropdown-item" href={{ url_for('binary') }}>binary</a>
                     <a class="dropdown-item" href={{ url_for('simon') }}>simon</a>
+                    <!-- in case we want a divider in our navbar in the future
+                        <div class="dropdown-divider"></div> -->
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Minilabs
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href={{ url_for('binary') }}>binary</a>
                     <a class="dropdown-item" href={{ url_for('rgb') }}>rgb</a>
-                    <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href={{ url_for('minilab') }}>minilab</a>
                     <a class="dropdown-item" href={{ url_for('meditation') }}>meditations</a>
                 </div>
