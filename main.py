@@ -44,6 +44,10 @@ def rbg():
 def meditation():
     return render_template("meditation.html")
 
+@app.route('/logicgates/')
+def logicgates():
+    return render_template("logicgates.html")
+
 @app.route('/simon', methods=['GET', 'POST'])
 def simon():
     # submit button has been pushed
@@ -94,6 +98,7 @@ def isabella():
             return render_template("isabella.html", name=name)
     # starting and empty input default
     return render_template("isabella.html", name="world")
+
 
 @app.route('/binary/', methods=['GET', 'POST'])
 def binary():
