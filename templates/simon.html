@@ -23,7 +23,7 @@
             <style>
 
             /** Everything that fades in **/
-                p,h4 ,#simon,.col-12{font-size: 25px;
+                p,h4 ,#simon,.col-12,.z {font-size: 25px;
                     animation-name:fadein;
                     animation-duration:4s;
                     color:darkgreen; }
@@ -38,18 +38,24 @@
             body {background-color:#cedec4}
 
             /** Made smaller zz's for Dreamzzz**/
-            p.z::after {
+            .z::after {
                 content:"zz";
-                font-size:15px;
+                font-size:15px;}
 
             ::selection {
                 color: lightgreen;
-                background: floralwhite;
+                background: floralwhite;}
+
+            .aboutme{
+                border-style:groove;
+                color:#cedec4;}
 
 
             </style>
 
             <br>
+
+        <div class="aboutme">
             <p class="fun"> Hello welcome to Simon Brunzell's about us Page, this is a page about the greatest thing ever... me!</p>
             <p class="fun">Some fun facts about me include...</p>
             <p class="fun"> I'm in 12th grade in my Senior year, I am a part of the Del Norte music program, I play the flute, have participated in choir, and
@@ -61,8 +67,7 @@
                 But if not, idk how you wouldn't, but if you don't some how...</p>
             <p class="fun"> go to Dreamzzz an amazing website full of resources to better your mental health,
                 it's also made by some really cool people, including me! ;) </p>
-            <p class="z"> Dreamz </p>
-
+        </div>
 
 
             <style>
@@ -84,14 +89,16 @@
                     100% {transform:rotateY(-360deg)}
                 }
 
-
             </style>
 
+            <br>
 
+        <div class="ad" style="width:250px">
             <a href="https://c.tenor.com/6Hixx4SFAeQAAAAM/backing-you-get-yours.gif" >
             <h4 class="fun" >#sponsored </h4>
             <h4 class="fun">#ad </h4>
             </a>
+        </div>
 
          <div class="thumb" style="width:250px" >
             <a href="https://docs.google.com/document/d/1ZmRTWw3wAjc18To9BVckSW1Xj8Yx1AtsTPls_FIshU8/edit ">
