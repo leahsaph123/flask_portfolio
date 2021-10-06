@@ -1,0 +1,19 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Hexcodes" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+    <div class="col-12">
+        <p>your number is <span id="hex">{{ hex }}</span> </p>
+    </div>
+    <div class="col-12">
+        <form action="/hexcodes" id="hexcodes-form" method="post">
+            <label for="number">what number would you like?</label>
+            <input name="number" id="hex" type="number">
+            <input type="submit" value="#">
+        </form>
+    </div>
+{% endblock %}

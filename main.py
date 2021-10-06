@@ -48,6 +48,14 @@ def meditation():
 def logicgates():
     return render_template("logicgates.html")
 
+@app.route('/hexcodes/')
+def hexcodes():
+    if request.form:
+        num = int(request.form.get("hex"))
+        if  num >= 0 and num <= 255:  # input field has content
+            return render_template("hexcodes.html", hex=num)
+    return render_template("hexcodes.html")
+
 @app.route('/simon', methods=['GET', 'POST'])
 def simon():
     # submit button has been pushed
