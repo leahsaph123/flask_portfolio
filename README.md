@@ -23,11 +23,11 @@ Week 7
 
 Assignee | Requirements | Evidence
 ----------- | ----------- | -----------
-Tigran | Multiply and Divide by 2 (Shift).  In this example, make the Bits change positions.  Start 2^0 to 2^15.  If you multiply by 2 then 2^0 bit becomes 2^1, 2^1 to 2^2.  If you divide 2^15 becomes 2^14 | da
+Tigran | Multiply and Divide by 2 (Shift).  In this example, make the Bits change positions.  Start 2^0 to 2^15.  If you multiply by 2 then 2^0 bit becomes 2^1, 2^1 to 2^2.  If you divide 2^15 becomes 2^14 | 
 Leah | Color Codes.  Display three rows of 8 bits.  Allow for code to be 0 to 255, show color for RGB.  Also, show color for R,G,B independently.  This may require a different HTML layout. | [ticket](https://github.com/leahsaph123/flask_portfolio/issues/55) and [proof](http://127.0.0.1:5000/hexcodes/) and [code](https://github.com/leahsaph123/flask_portfolio/blob/main/templates/hexcodes.html)
 Leah | Logic Gates.   CB requires an understanding of Expressions.  These are routed in Logic Gates (as language is routed in Latin). Consider an entirely different presentation area and idea.  In this example, you may have two inputs (a,b) and see how changing those inputs changes logic gate outputs (c).  This will likely require a different HTML. | 
-Simon | Extend/Switch ASCII  to Unicode.   Use representation of U-0000 to U-FFFF for your bits.  The extension of ASCII to Unicode mode allows you to show even more Characters and Character ranges | da
-Isabella | Unsigned Addition, Subtraction (Default).  Whole Numbers. Max number move from 255 to 65535.  Essentially 8 bits to 16 bits.  16 bits is often called a "Short Integer". | da
+Simon | Extend/Switch ASCII  to Unicode.   Use representation of U-0000 to U-FFFF for your bits.  The extension of ASCII to Unicode mode allows you to show even more Characters and Character ranges | 
+Isabella | Unsigned Addition, Subtraction (Default).  Whole Numbers. Max number move from 255 to 65535.  Essentially 8 bits to 16 bits.  16 bits is often called a "Short Integer". | 
 Isabella | Signed Addition, Subtraction (Selection).  Integer Numbers.  Subtraction (8th bit is a Sign, max number is  +127 and negative -128, overflow now produces negative number.  If sign bit is set the calculation is 128-bits. | 
 
 
