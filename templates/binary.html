@@ -141,7 +141,7 @@
             document.getElementById('decimal').innerHTML = decimal.toString(10)
             <!-- Hack: derive printable character(s) for each 8 bits -->
             // document.getElementById('ASCII').innerHTML = parseInt(binary, 2).toString(10);
-            document.getElementById('ASCII').innerHTML = String.fromCharCode(decimal)
+            document.getElementById('ASCII').innerHTML= String.fromCharCode(decimal)
             /* this is new for unicode */
             document.getElementById('unicode').innerHTML = String.fromCharCode(decimal)
 
@@ -356,3 +356,7 @@
 {% endblock %}
 
 <!- This is turning off birds background from base.html -->
+
+<!-- For some reason from 127-161 ASCII or Unicode is displaying
+nothing even though unicode does have values between there
+    Never mind this is wear Latin Supplement 1 of Unicode starts lol-->

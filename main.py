@@ -104,7 +104,7 @@ def isabella():
     return render_template("isabella.html", name="world")
 
 
-@app.route('/binary/', methods=['GET', 'POST'])
+@app.route('/binary', methods=['GET', 'POST'])
 def binary():
     if request.form:
         num = int(request.form.get("number"))
@@ -121,5 +121,7 @@ def rgb():
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
+
+
 
 
