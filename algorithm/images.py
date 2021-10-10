@@ -21,9 +21,10 @@ def image_data(path=Path("static/img/"), img_list=None):  # path of static image
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
             {'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png"},
-            {'label': "pretty boys", 'file': "ateez.jpg",}
-        ]
-    # gather analysis data and meta data for each image, adding attributes to each row in table
+            {'label': "pretty boys", 'file': "ateez.jpg",}]
+
+    # gather analysis data and meta data for each image, adding attributes to each row in table, open, font type,editable format,
+
     for img_dict in img_list:
         file = path / img_dict['file']  # file with path for local access (backend)
         # Python Image Library operations
