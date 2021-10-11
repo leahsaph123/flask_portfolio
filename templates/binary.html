@@ -190,11 +190,14 @@
             let binary = getBits();
             // convert to decimal and do math
             let decimal = parseInt(binary, 2);
-            if (n > 0) {  // PLUS
+            if (n == 1) {  // PLUS
                 decimal = MAX === decimal ? 0 : decimal += n; // OVERFLOW or PLUS
-            } else  {     // MINUS
-                decimal = 0 === decimal ? MAX : decimal += n; // OVERFLOW or MINUS
-            }
+            } else if (n==2) {     // MINUS
+                decimal = MAX == decimal ? 0 : decimal *= n; // OVERFLOW or MINUS
+            } else if (n==0.5) {
+                decimal = MAX === decimal ? 0 : decimal *=n;
+
+            } else  {decimal = 0=== decimal ? MAX : decimal +=n;}
             // convert the result back to binary
             binary = decimal_2_base(decimal, 2);
             // update conversions
@@ -252,6 +255,7 @@
                 </tr>
                 <tr>
                     <!--Displays I think-->
+                    <td><button type="button" id="multiply2" onclick="add(2)">×2</button></td>
                     <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
                     <td id="binary">00000000</td>
                     <td id="octal">0</td>
@@ -262,6 +266,7 @@
                     <td id="unicode">0</td>
                     <!-- Hack: display printable character(s)  -->
                     <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
+                    <td><button type="button" id="divide2" onclick="add(0.5)">÷2</button></td>
                 </tr>
             </table>
         </div>
@@ -301,6 +306,8 @@
                     <td><img class="img-responsive py-3" id="bulb7" src="/static/assets/bulb_off.png" alt="" width="40" height="Auto">
                         <button type="button" id="butt7" onclick="toggleBit('7')">Turn On</button>
                     </td>
+
+                    <td><button type="button" id="shift left" onclick="shift(1)"<<1</button></td>
 
                 </tr>
                 <tr>

@@ -16,6 +16,8 @@
             red();
             green();
             blue();
+            makergb();
+
 
             function red() {
                 var redLine = $("#red-line")
@@ -25,8 +27,11 @@
                 for(var button of buttons) {
                     string += button.innerHTML.trim();
                 }
-                var redhex = parseInt(string, 2)
-                $("#red-binary").text(redhex)
+                var redhex = parseInt(string, 2);
+                document.getElementById("red").innerHTML = redhex;
+                document.getElementById("redbinaryprint").innerHTML = redhex;
+
+                $("#red-binary").text(redhex);
             }
 // when clicked, reads the button's text as either a 0 or 1, waits for a button to be clicked and then runs (event listener)
             $(".tgl-btn").click("click", function () {
@@ -39,6 +44,7 @@
                     this.innerHTML= "0"
                 }
                 red();
+                makergb();
             });
             function green(){
                 var greenLine = $("#green-line")
@@ -49,7 +55,10 @@
                     string += button.innerHTML.trim();
                 }
                 var greenhex = parseInt(string, 2)
+                document.getElementById("green").innerHTML = greenhex;
+                document.getElementById("greenbinaryprint").innerHTML = greenhex;
                 $("#green-binary").text(greenhex)
+
             }
 // when clicked, reads the button's text as either a 0 or 1, waits for a button to be clicked and then runs (event listener)
             $(".tgl-btn1").click("click", function () {
@@ -62,6 +71,7 @@
                     this.innerHTML= "0"
                 }
                 green();
+                makergb();
             });
             function blue(){
                 var blueLine = $("#blue-line")
@@ -72,7 +82,11 @@
                     string += button.innerHTML.trim();
                 }
                 var bluehex = parseInt(string, 2)
+                bluehex =
+                document.getElementById("blue").innerHTML = bluehex;
+                document.getElementById("bluebinaryprint").innerHTML = bluehex;
                 $("#blue-binary").text(bluehex)
+
             }
 // when clicked, reads the button's text as either a 0 or 1, waits for a button to be clicked and then runs (event listener)
             $(".tgl-btn2").click("click", function () {
@@ -85,7 +99,22 @@
                     this.innerHTML= "0"
                 }
                 blue();
+                makergb();
             });
+
+            function makergb(){
+                var red = document.getElementById("red").innerHTML.toString(16);
+                var green = document.getElementById("green").innerHTML.toString(16);
+                var blue = document.getElementById("blue").innerHTML.toString(16);
+                var rgb = '#' + red + green + blue;
+
+
+                document.getElementById("hexcode").innerHTML = rgb;
+                console.log(red);
+                const element = document.getElementById("hexline")
+                element.style.backgroundColor = rgb;
+            }
+                makergb();
 
         });
     </script>
@@ -129,7 +158,7 @@
         <button class="tgl-btn" id="test"> 0</button>
         <button class="tgl-btn" id="test"> 0</button>
         <button class="tgl-btn" id="test"> 0</button>
-
+        <p hidden id="red">0</p>
         <p> R: Decimal value is <span id="red-binary"></span></p>
 
     </div>
@@ -143,7 +172,7 @@
         <button class="tgl-btn1" id="test"> 0</button>
         <button class="tgl-btn1" id="test"> 0</button>
         <button class="tgl-btn1" id="test"> 0</button>
-
+        <p hidden id="green">0</p>
         <p> G: Decimal value is <span id="green-binary"></span></p>
 
     </div>
@@ -157,12 +186,30 @@
         <button class="tgl-btn2" id="test"> 0</button>
         <button class="tgl-btn2" id="test"> 0</button>
         <button class="tgl-btn2" id="test"> 0</button>
-
+        <p hidden id="blue">0</p>
         <p> B: Decimal value is <span id="blue-binary"></span></p>
 
     </div>
 
-    <div id="hexcode">
+    <div id="hexinfo">
+        <p>The hexcode is <span id="hexcode"></span></p>
+        <p>The RGB is (<span id="redbinaryprint">0</span>, <span id="greenbinaryprint">0</span>, <span id="bluebinaryprint">0</span>)</p>
+    <p> **NOTE the closer the hex code is to #cedec4, the less it will show up because that is the background color of this page **</p>
+    </div>
+
+    <div class="container" id="hexline">
 
     </div>
+
+        <style>
+        :root {
+            --rgbvar: ;
+        }
+        .container {
+            background-color: var(--rgbvar);
+            height: 200px;
+            width: 1000px;
+        }
+        </style>
+
 {% endblock %}
