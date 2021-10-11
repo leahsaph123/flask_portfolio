@@ -27,11 +27,14 @@
                 for(var button of buttons) {
                     string += button.innerHTML.trim();
                 }
-                var redhex = parseInt(string, 2);
+                var redhex = parseInt(string, 2)
+                $("#red-hex").text(redhex)
+                var redhex = parseInt(string, 2).toString(16);
+                $("#red-binary").text(redhex);
+
                 document.getElementById("red").innerHTML = redhex;
                 document.getElementById("redbinaryprint").innerHTML = redhex;
 
-                $("#red-binary").text(redhex);
             }
 // when clicked, reads the button's text as either a 0 or 1, waits for a button to be clicked and then runs (event listener)
             $(".tgl-btn").click("click", function () {
@@ -55,9 +58,12 @@
                     string += button.innerHTML.trim();
                 }
                 var greenhex = parseInt(string, 2)
+                $("#green-hex").text(greenhex)
+                var greenhex = parseInt(string, 2).toString(16);
+                $("#green-binary").text(greenhex)
+
                 document.getElementById("green").innerHTML = greenhex;
                 document.getElementById("greenbinaryprint").innerHTML = greenhex;
-                $("#green-binary").text(greenhex)
 
             }
 // when clicked, reads the button's text as either a 0 or 1, waits for a button to be clicked and then runs (event listener)
@@ -82,10 +88,13 @@
                     string += button.innerHTML.trim();
                 }
                 var bluehex = parseInt(string, 2)
-                bluehex =
+                $("#blue-hex").text(bluehex)
+                var bluehex = parseInt(string, 2).toString(16);
+                $("#blue-binary").text(bluehex)
+
                 document.getElementById("blue").innerHTML = bluehex;
                 document.getElementById("bluebinaryprint").innerHTML = bluehex;
-                $("#blue-binary").text(bluehex)
+
 
             }
 // when clicked, reads the button's text as either a 0 or 1, waits for a button to be clicked and then runs (event listener)
@@ -103,16 +112,24 @@
             });
 
             function makergb(){
-                var red = document.getElementById("red").innerHTML.toString(16);
-                var green = document.getElementById("green").innerHTML.toString(16);
-                var blue = document.getElementById("blue").innerHTML.toString(16);
-                var rgb = '#' + red + green + blue;
+                var red = document.getElementById("red").innerHTML;
+               if (red.length < 2) {
+                    red = '0' + red
+                }
+                var green = document.getElementById("green").innerHTML;
+               if (green.length < 2) {
+                    green = '0' + green
+                }
+                var blue = document.getElementById("blue").innerHTML;
+                if (blue.length < 2) {
+                    blue = '0' + blue
+                }
+                var rgb1 =  '#' + red + green + blue;
 
+                document.getElementById("hexcode").innerHTML = rgb1;
 
-                document.getElementById("hexcode").innerHTML = rgb;
-                console.log(red);
                 const element = document.getElementById("hexline")
-                element.style.backgroundColor = rgb;
+                element.style.backgroundColor = rgb1;
             }
                 makergb();
 
@@ -159,7 +176,8 @@
         <button class="tgl-btn" id="test"> 0</button>
         <button class="tgl-btn" id="test"> 0</button>
         <p hidden id="red">0</p>
-        <p> R: Decimal value is <span id="red-binary"></span></p>
+        <p> R: Hex value is <span id="red-binary"></span></p>
+        <p> R: Decimal Value is <span id="red-hex"></span></p>
 
     </div>
 
@@ -173,7 +191,9 @@
         <button class="tgl-btn1" id="test"> 0</button>
         <button class="tgl-btn1" id="test"> 0</button>
         <p hidden id="green">0</p>
-        <p> G: Decimal value is <span id="green-binary"></span></p>
+        <p> G: Hex value is <span id="green-binary"></span></p>
+        <p> G: Decimal Value is <span id="green-hex"></span></p>
+
 
     </div>
 
@@ -187,7 +207,9 @@
         <button class="tgl-btn2" id="test"> 0</button>
         <button class="tgl-btn2" id="test"> 0</button>
         <p hidden id="blue">0</p>
-        <p> B: Decimal value is <span id="blue-binary"></span></p>
+        <p> B: Hex value is <span id="blue-binary"></span></p>
+        <p> B: Decimal Value is <span id="blue-hex"></span></p>
+
 
     </div>
 
