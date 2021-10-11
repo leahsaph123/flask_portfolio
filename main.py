@@ -113,6 +113,14 @@ def rgb():
     path = Path(app.root_path) / "static" / "img"
     return render_template('rgb.html', images=image_data(path))
 
+@app.route('/signedaddition/')
+def signed():
+    return render_template("signedaddition.html")
+
+@app.route('/unsignedaddition/')
+def unsigned():
+    return render_template("unsignedaddition.html")
+
 student_list = [
     'pam', 'rob', 'joe', 'greg', 'bob', 'amy', 'matt'
 ]
@@ -122,9 +130,7 @@ print(student_list[6])
 print(student_list)
 
 
-@app.route('/signedaddition')
-def signed():
-    return render_template("signedaddition.html")
+
 
 
 # runs the application on the development server

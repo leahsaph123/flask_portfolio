@@ -1,32 +1,32 @@
-<!-- Navigation Bar from bootstrap
-This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
--->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="https://csp.nighthawkcodingsociety.com/">{{basename}}</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-            <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
-            <a class="nav-link" href={{ url_for('index') }}>Portfolio</a>
-            <a class="nav-link" href={{ url_for('kangaroos') }}>Kangaroos</a>
-            <a class="nav-link" href={{ url_for('walruses') }}>Walruses</a>
-            <a class="nav-link" href={{ url_for('hawkers') }}>Hawkers</a>
-            <a class="nav-link" href={{ url_for('isabella') }}>Isabella</a>
-            <a class="nav-link" href={{ url_for('leah') }}>Leah</a>
-            <a class="nav-link" href={{ url_for('Tigran') }}>Tigran</a>
-            <a class="nav-link" href="/minilab">minilab</a>
-            <!-- stub is shown using the name of the route -->
-            <a class="nav-link" href="/stub">Stub</a>
-            <a class="nav-link" href={{ url_for('simon') }}>Simon</a>
-            <a class="nav-link" href={{ url_for('minilab') }}>Mini-lab</a>
-        </div>
-    </div>
-</nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>navbar</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/boostrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baD1411NQApFmC26EwAOH8WgZ15MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <style>
+
+        p {font-size: 20px;color:darkgreen; text-align: center}
+        body {background-color:#cedec4}
+        .col {background-color: #e9ede6; text-align: center; border-style: solid; border-color: #e9ede6}
+        #greet {font-size: 20px;color:darkgreen;}
+
+        /** Gives the Dreamzzz logo some smaller zz's **/
+        #zz::after {
+            content:"zz";
+            font-size:12px;}
+        }
+
+
+    </style>
+</head>
+<body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="http://127.0.0.1:5000/">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -34,24 +34,45 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+
+                <!-- This is where the dreamzzz with smaller zz's is-->
+                <a class="nav-link" id="zz" href="https://www.headspace.com/">Knock off Dreamz<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="https://github.com/leahsaph123/flask_portfolio">repository</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href={{ url_for('Articles') }}>Articles</a>
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href={{ url_for('meditation') }}>Meditations</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
+                    About Us
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href={{ url_for('isabella') }}>isabella</a>
+                    <a class="dropdown-item" href={{ url_for('leah') }}>leah</a>
+                    <a class="dropdown-item" href={{ url_for('Tigran') }}>tigran</a>
+                    <a class="dropdown-item" href={{ url_for('simon') }}>simon</a>
+                    <!-- in case we want a divider in our navbar in the future
+                        <div class="dropdown-divider"></div> -->
                 </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Minilabs
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href={{ url_for('binary') }}>binary</a>
+                    <a class="dropdown-item" href={{ url_for('rgb') }}>rgb</a>
+                    <a class="dropdown-item" href={{ url_for('logicgates') }}>logic gates</a>
+                    <a class="dropdown-item" href={{ url_for('signed') }}>signed addition</a>
+                    <a class="dropdown-item" href={{ url_for('unsigned') }}>unsigned addition</a>
+                    <a class="dropdown-item" href={{ url_for('minilab') }}>minilab</a>
+                </div>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -60,3 +81,5 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         </form>
     </div>
 </nav>
+</body>
+</html>
