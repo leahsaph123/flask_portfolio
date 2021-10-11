@@ -36,10 +36,6 @@ def Articles():
 def stub():
     return render_template("stub.html")
 
-@app.route('/rbg/')
-def rbg():
-    return render_template("rbg.html")
-
 @app.route('/meditation/')
 def meditation():
     return render_template("meditation.html")
@@ -112,7 +108,7 @@ def binary():
             return render_template("binary.html", number1=num)
     return render_template("binary.html")
 
-@app.route('/rgb/', methods=["GET", "POST"])
+@app.route('/rgb', methods=["GET", "POST"])
 def rgb():
     path = Path(app.root_path) / "static" / "img"
     return render_template('rgb.html', images=image_data(path))
@@ -125,6 +121,10 @@ print(student_list[:-5])
 print(student_list[6])
 print(student_list)
 
+
+@app.route('/signedaddition')
+def signed():
+    return render_template("signedaddition.html")
 
 
 # runs the application on the development server
