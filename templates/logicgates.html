@@ -6,25 +6,73 @@
 
 <!-- Setting up a block replacement to customize background to BIRDS -->
 {% block body %}
-    <p> Logic Gates</p>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <h1> Logic Gates</h1>
+    </head>
+    <body>
+    <style>
+        h1 {text-align: center;}
+    </style>
     <style>
         table, th, td {border: 1px solid black; align-content: center; align: center}
     </style>
     <table style="width:100%">
-    <tr>
-        <th>Logic Gate</th>
-        <th>Symbol</th>
-        <th>Result</th>
-    </tr>
-    <tr>
-        <td> And Gate</td>
-        <td> <img src="static/assets/and_gate.png"> </td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Nand Gate</td>
-        <td></td>
-        <td></td>
-    </tr>
+        <tr>
+            <th>Logic Gate</th>
+            <th>Symbol</th>
+        </tr>
+
+        <input style="margin-left: 20px" type="checkbox" id="input1" name="input1" value="Input A" />
+        <label for="input1">A</label>
+        <input style="margin-left: 20px" type="checkbox" id="input2" name="input2" value="Input B" />
+        <label for="input2">B</label>
+        <input style="margin-left: 20px" type="button" onclick="logicGates()" value="Submit">
+
+
+        <tr>
+            <td><img src="https://www.tutorialspoint.com/computer_logical_organization/images/and_logic.jpg"><p>AND GATE</p></td>
+            <td><textarea id="outputAND_text" rows="1" cols="20"></textarea></td>
+        </tr>
+
+        <tr>
+            <td><img src="https://www.tutorialspoint.com/computer_logical_organization/images/not_logic.jpg"> <p>NOT GATE</p></td>
+            <td><textarea id="outputNOT_text" rows="1" cols="20"></textarea></td>
+        </tr>
+
+        <tr>
+            <td><img src="https://www.tutorialspoint.com/computer_logical_organization/images/or_logic.jpg"><p>OR GATE</p></td>
+            <td><textarea id="outputOR_text" rows="1" cols="20"></textarea></td>
+        </tr>
+
+        <tr>
+            <td><img src='https://www.tutorialspoint.com/computer_logical_organization/images/nand_logic.jpg'><p>NAND GATE</p></td>
+            <td><textarea id="outputNAND_text" rows="1" cols="20"></textarea></td>
+        </tr>
+
     </table>
+
+    <script>
+
+        function logicGates()
+        {
+            input1 = document.getElementById("input1").checked;
+            input2 = document.getElementById("input2").checked;
+            outputOR = input1 || input2;
+            outputAND = input1 && input2;
+            outputNOT = !input1
+            outputNAND = !(input1 && input2);
+
+            document.getElementById("outputAND_text").value = outputAND;
+            document.getElementById("outputNOT_text").value = outputNOT;
+            document.getElementById("outputOR_text").value = outputOR;
+            document.getElementById("outputNAND_text").value = outputNAND;
+
+        }
+    </script>
+    </body>
+    </html>
+
 {% endblock %}

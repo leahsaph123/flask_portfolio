@@ -196,7 +196,6 @@
                 decimal = MAX == decimal ? 0 : decimal *= n; // OVERFLOW or MINUS
             } else if (n==0.5) {
                 decimal = MAX === decimal ? 0 : decimal *=n;
-
             } else  {decimal = 0=== decimal ? MAX : decimal +=n;}
             // convert the result back to binary
             binary = decimal_2_base(decimal, 2);
