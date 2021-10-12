@@ -29,6 +29,8 @@ Tigran | Logic Gates.   CB requires an understanding of Expressions.  These are 
 Simon | Extend/Switch ASCII  to Unicode.   Use representation of U-0000 to U-FFFF for your bits.  The extension of ASCII to Unicode mode allows you to show even more Characters and Character ranges | [ticket](https://github.com/leahsaph123/flask_portfolio/issues/54) and  [code](https://github.com/leahsaph123/flask_portfolio/commit/1c9bd32e41a226faea4806b04d8219dcf7d65505) and [proof](http://127.0.0.1:5000/binary) 
 Isabella | Unsigned Addition, Subtraction (Default).  Whole Numbers. Max number move from 255 to 65535.  Essentially 8 bits to 16 bits.  16 bits is often called a "Short Integer". | [ticket](https://github.com/leahsaph123/flask_portfolio/issues/58) and [proof](http://127.0.0.1:5000/unsignedaddition/) and [code](https://github.com/leahsaph123/flask_portfolio/commit/022a16ba8ef55a881821417d5683fecb4a776abd)
 Isabella | Signed Addition, Subtraction (Selection).  Integer Numbers.  Subtraction (8th bit is a Sign, max number is  +127 and negative -128, overflow now produces negative number.  If sign bit is set the calculation is 128-bits. | [ticket](https://github.com/leahsaph123/flask_portfolio/issues/58) and [proof](http://127.0.0.1:5000/signedaddition/) and [code](https://github.com/leahsaph123/flask_portfolio/commit/022a16ba8ef55a881821417d5683fecb4a776abd)
+Video | [group video](https://drive.google.com/file/d/1Ecj7jM3InjBOBdSuSAyljcaI4RqUEJ2J/preview) 
+
 
 
 Week 5 and Week 6
