@@ -8,37 +8,82 @@
 {% block body %}
     <p>Articles About Mental Health</p>
     <div class="container rounded">
-    <div class="row g-1">
-        <div class="col">
-            <div class="p-3 border bg-light">Mindfulness</div>
+    <div class="row mx-n5 g-1">
+        <div class="col px-5 rounded">
+            <div class="p-3">Mindfulness</div>
         </div>
-        <div class="col">
-            <div class="p-3 border bg-light">Mindfulness</div>
+        <div class="col px-5 rounded" width: 100%>
+            <div class="p-3">Mindfulness</div>
         </div>
-        <div class="col">
-            <div class="p-3 border bg-light">Mindfulness</div>
+        <div class="col px-5 rounded" width: 100%>
+            <div class="p-3">Mindfulness</div>
         </div>
     </div>
 
         <div class="w-100"></div>
-    <div class="row g-1">
-        <div class="col">
-            <div class="p-3 border bg-light">Mindfulness</div>
+    <div class="row mx-n5 g-1">
+        <div class="col px-5 rounded">
+            <div class="p-3">Time-Management</div>
         </div>
 
-        <div class="col">
-            <div class="p-3 border bg-light">Mindfulness</div>
+        <div class="col px-5 rounded">
+            <div class="p-3"></div>
         </div>
-        <div class="col">
-            <div class="p-3 border bg-light">Mindfulness</div>
+        <div class="col px-5 rounded">
+            <div class="p-3"></div>
         </div>
     </div>
+
+        <div class="w-100"></div>
+        <div class="row mx-n5 g-1">
+            <div class="col px-5 rounded">
+                <div class="p-3">Focus</div>
+            </div>
+
+            <div class="col px-5 rounded">
+                <div class="p-3"></div>
+            </div>
+            <div class="col px-5 rounded">
+                <div class="p-3"></div>
+            </div>
+        </div>
+
+        <div class="w-100"></div>
+        <div class="row mx-n5 g-1">
+            <div class="col px-5 rounded">
+                <div class="p-3">Stress-Management</div>
+            </div>
+
+            <div class="col px-5 rounded">
+                <div class="p-3"></div>
+            </div>
+            <div class="col px-5 rounded">
+                <div class="p-3"></div>
+            </div>
+        </div>
     </div>
 
     <style>
-        p {font-size: 20px;color:darkgreen; text-align: center}
+        p {font-size: 20px; color:darkgreen; text-align: center}
         body {background-color:#cedec4}
-        .col {background-color: #e9ede6; text-align: center; border-style: solid; border-color: #e9ede6}
+        .container {
+            padding: 0 50px 0 50px;
+        }
+        .col rounded {
+            background-color: #e9ede6;
+            text-align: center;
+            border-style: solid;
+            border-width: 100px;
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-bottom: 50px;
+            margin-top: 50px;
+            border-color: #e9ede6;
+            padding: 50%;
+        }
+        .p-3 {
+            text-color: darkgreen;
+        }
         #greet {font-size: 20px;color:darkgreen;}
     </style>
 {% endblock %}
