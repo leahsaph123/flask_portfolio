@@ -10,6 +10,7 @@ Table of Contents
 Credits
 =====
 
+[Contributions Graphs](https://github.com/leahsaph123/flask_portfolio/graphs/contributors)
 Name | Github | Commits | Tasks | Scrumboard | Journal 
 ----------- | ----------- | ------------- | ------------- | ------------- | -----------
 Leah Bogomolny | [@leahsaph123](https://github.com/leahsaph123) | [Commits](https://github.com/leahsaph123/flask_portfolio/commits?author=leahsaph123) ***FOR NOW DO Ctrl+F and search "leahsaph123" in order to see what I've done | [Tasks](https://github.com/leahsaph123/flask_portfolio/projects/1?card_filter_query=assignee%3Aleahsaph123) | [Scrumboard](https://github.com/leahsaph123/flask_portfolio/projects/1) | [Isabella Yan and Leah Bogomolny Journal](https://docs.google.com/document/d/1OXrhPY_AdWYU6Hmka9spMCCovSuUE5EzOlF2UmKu1cc/edit?usp=sharing) 
