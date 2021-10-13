@@ -10,6 +10,7 @@ Table of Contents
 Credits
 =====
 
+[Contributions Graphs](https://github.com/leahsaph123/flask_portfolio/graphs/contributors)
 Name | Github | Commits | Tasks | Scrumboard | Journal 
 ----------- | ----------- | ------------- | ------------- | ------------- | -----------
 Leah Bogomolny | [@leahsaph123](https://github.com/leahsaph123) | [Commits](https://github.com/leahsaph123/flask_portfolio/commits?author=leahsaph123) ***FOR NOW DO Ctrl+F and search "leahsaph123" in order to see what I've done | [Tasks](https://github.com/leahsaph123/flask_portfolio/projects/1?card_filter_query=assignee%3Aleahsaph123) | [Scrumboard](https://github.com/leahsaph123/flask_portfolio/projects/1) | [Isabella Yan and Leah Bogomolny Journal](https://docs.google.com/document/d/1OXrhPY_AdWYU6Hmka9spMCCovSuUE5EzOlF2UmKu1cc/edit?usp=sharing) 
@@ -25,10 +26,13 @@ Assignee | Requirements | Evidence
 ----------- | ----------- | -----------
 Tigran | Multiply and Divide by 2 (Shift).  In this example, make the Bits change positions.  Start 2^0 to 2^15.  If you multiply by 2 then 2^0 bit becomes 2^1, 2^1 to 2^2.  If you divide 2^15 becomes 2^14 | [ticket](https://github.com/leahsaph123/flask_portfolio/issues/53) and [proof](http://127.0.0.1:5000/binary/) and [code](https://github.com/leahsaph123/flask_portfolio/commit/ae6212d43c0eb2d1819d6fc42e1e44dd525374a3)
 Leah | Color Codes.  Display three rows of 8 bits.  Allow for code to be 0 to 255, show color for RGB.  Also, show color for R,G,B independently.  This may require a different HTML layout. | [ticket](https://github.com/leahsaph123/flask_portfolio/issues/55) and [proof](http://127.0.0.1:5000/hexcodes/) and [code](https://github.com/leahsaph123/flask_portfolio/blob/main/templates/hexcodes.html)
-Leah | Logic Gates.   CB requires an understanding of Expressions.  These are routed in Logic Gates (as language is routed in Latin). Consider an entirely different presentation area and idea.  In this example, you may have two inputs (a,b) and see how changing those inputs changes logic gate outputs (c).  This will likely require a different HTML. | 
-Simon | Extend/Switch ASCII  to Unicode.   Use representation of U-0000 to U-FFFF for your bits.  The extension of ASCII to Unicode mode allows you to show even more Characters and Character ranges | 
+Tigran | Logic Gates.   CB requires an understanding of Expressions.  These are routed in Logic Gates (as language is routed in Latin). Consider an entirely different presentation area and idea.  In this example, you may have two inputs (a,b) and see how changing those inputs changes logic gate outputs (c).  This will likely require a different HTML. |  [ticket](https://github.com/leahsaph123/flask_portfolio/issues/56) and [proof](http://127.0.0.1:5000/logicgates/) and [code](https://github.com/leahsaph123/flask_portfolio/commit/683b1d722d2b6d0201e75d934c9edbcbfb7dadf8) 
+Simon | Extend/Switch ASCII  to Unicode.   Use representation of U-0000 to U-FFFF for your bits.  The extension of ASCII to Unicode mode allows you to show even more Characters and Character ranges | [ticket](https://github.com/leahsaph123/flask_portfolio/issues/54) and  [code](https://github.com/leahsaph123/flask_portfolio/commit/1c9bd32e41a226faea4806b04d8219dcf7d65505) and [proof](http://127.0.0.1:5000/binary) 
 Isabella | Unsigned Addition, Subtraction (Default).  Whole Numbers. Max number move from 255 to 65535.  Essentially 8 bits to 16 bits.  16 bits is often called a "Short Integer". | [ticket](https://github.com/leahsaph123/flask_portfolio/issues/58) and [proof](http://127.0.0.1:5000/unsignedaddition/) and [code](https://github.com/leahsaph123/flask_portfolio/commit/022a16ba8ef55a881821417d5683fecb4a776abd)
 Isabella | Signed Addition, Subtraction (Selection).  Integer Numbers.  Subtraction (8th bit is a Sign, max number is  +127 and negative -128, overflow now produces negative number.  If sign bit is set the calculation is 128-bits. | [ticket](https://github.com/leahsaph123/flask_portfolio/issues/58) and [proof](http://127.0.0.1:5000/signedaddition/) and [code](https://github.com/leahsaph123/flask_portfolio/commit/022a16ba8ef55a881821417d5683fecb4a776abd)
+Video | [group video](https://drive.google.com/file/d/1Eiv9tlg3Buit1KfQ4O-ougd-9polhPKr/view?usp=drivesd)
+Review Ticket | [ticket](https://github.com/leahsaph123/flask_portfolio/issues/62)
+
 
 
 Week 5 and Week 6
