@@ -129,6 +129,19 @@ def signed():
 def unsigned():
     return render_template("unsignedaddition.html")
 
+
+@app.route('/calmingSounds', methods=['GET', 'POST'])
+def calmingSounds():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("calmingSounds.html", name1=name)
+    # starting and empty input default
+    return render_template("calmingSounds.html", name1="World")
+
+
+
 student_list = [
     'pam', 'rob', 'joe', 'greg', 'bob', 'amy', 'matt'
 ]
@@ -136,6 +149,7 @@ print(student_list[2:5])
 print(student_list[:-5])
 print(student_list[6])
 print(student_list)
+
 
 
 
