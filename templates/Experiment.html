@@ -1,0 +1,80 @@
+<!-- Extending the project layout, as this file will do minor customizations -->
+{% extends "layouts/base.html" %}
+
+<!-- Setting up variables to customize "project" details to be specific to hawkers -->
+{% set project = "Experiment" %}
+
+<!-- Setting up a block replacement to customize background to BIRDS -->
+{% block body %}
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <h1> What's the password</h1>
+
+    </head>
+
+    <body>
+
+    <style>
+
+        h1 {text-align: center;}
+        body {background-color:#cedec4}
+
+        table, th, td {border: 1px solid black; align-content: center; align: center; width:600px}
+
+    </style>
+h
+    <div style="padding-left:300px">
+        <table style="text-align:center;height: 200px">
+
+        <tr>
+            <th></th>
+            <th>The Door is unlocked</th>
+        </tr>
+
+        <input style="margin-left: 20px" type="checkbox" id="letterA" name="letterA" value="letterA" />
+        <label for="letterA">A</label>
+        <input style="margin-left: 20px" type="checkbox" id="letterB" name="letterB" value="letterB" />
+        <label for="letterB">B</label>
+        <input style="margin-left: 20px" type="checkbox" id="letterC" name="letterC" value="letterC" />
+        <label for="letterC">C</label>
+        <input style="margin-left: 20px" type="button" onclick="Experiment()" value="Submit">
+
+
+        <tr>
+            <td><img src="https://www.charismamag.com/images/stories/2018/blogs/Prophetic_Insight/key-hole.jpg"><p></p></td>
+            <td><textarea id="lockStatus_text" rows="1" cols="20"></textarea></td>
+        </tr>
+
+
+    </table>
+    </div>
+
+
+    <script>
+
+        function Experiment()
+        {
+            letterA = document.getElementById("letterA").checked;
+            letterB = document.getElementById("letterB").checked;
+
+            correctAandB = letterA && letterB;
+
+
+
+
+            document.getElementById("lockStatus_text").value = correctAandB
+
+
+
+
+
+        }
+    </script>
+    </body>
+    </html>
+
+{% endblock %}

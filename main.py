@@ -48,6 +48,14 @@ def logicgates():
 def hexcodes():
     return render_template("hexcodes.html")
 
+@app.route('/Experiment/')
+def Experiemnt():
+    return render_template("Experiment.html")
+
+@app.route('/pomodoro/')
+def pomodoro():
+    return render_template("pomodoro.html")
+
 @app.route('/simon', methods=['GET', 'POST'])
 def simon():
     # submit button has been pushed
