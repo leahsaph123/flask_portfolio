@@ -1,7 +1,9 @@
 # import "packages" from flask
+import requests
 from flask import Flask, render_template, request
 from algorithm.images import image_data
 from pathlib import Path
+from .starter import app_starter
 
 # create a Flask instance
 app = Flask(__name__)
@@ -142,6 +144,8 @@ def calmingSounds():
 
 
 
+
+
 student_list = [
     'pam', 'rob', 'joe', 'greg', 'bob', 'amy', 'matt'
 ]
@@ -152,7 +156,7 @@ print(student_list)
 
 
 
-
+app.register_blueprint(app_starter)
 
 
 # runs the application on the development server
