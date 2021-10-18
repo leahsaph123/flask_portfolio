@@ -3,14 +3,211 @@
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Calming Sounds</title>
-    <h1>Calming Sounds</h1>
+    <style>
+        h1 {
+            text-shadow: 5px 5px 13px #49b7e0;
+            text-align:center;
+            font-size: 100px
+        }
+    </style>
+        <h1 style="color:white;text-shadow:#030303"><b>Calming Sounds</b></h1>
+
+
+    <style>
+        .button {
+            border: none;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 35px;
+            margin: 4px 2px;
+            transition-duration: .3s;
+            cursor: pointer;
+            width: 300px;
+            height: 300px;
+            background-color: transparent;
+
+
+        }
+        .button1 {
+
+            color: black;
+            border: 2px solid #49b7e0;
+            position: fixed;
+            top: 200px;
+            left: 30px;
+
+
+        }
+        .button1:hover {
+            background-color: #49b7e0;
+            color: white;
+            position: fixed;
+            top: 200px;
+            left: 30px;
+
+        }
+
+        .button2 {
+            color: black;
+            border: 2px solid #9a9a9a;
+            position: fixed;
+            bottom: 100px;
+            left: 330px;
+
+
+        }
+        .button2:hover {
+            background-color: #9a9a9a;
+            color: white;
+            position: fixed;
+            bottom: 100px;
+            left: 330px;
+        }
+        .button3 {
+
+            color: black;
+            border: 2px solid #49b7e0;
+            position: fixed;
+            top: 200px;
+            left: 630px;
+
+
+        }
+        .button3:hover {
+            background-color: #49b7e0;
+            color: white;
+            position: fixed;
+            top: 200px;
+            left: 630px;
+        }
+        .button4 {
+
+            color: black;
+            border: 2px solid #9a9a9a;
+            position: fixed;
+            bottom: 100px;
+            left: 930px;
+
+
+        }
+        .button4:hover {
+            background-color: #9a9a9a;
+            color: white;
+            position: fixed;
+            bottom: 100px;
+            left: 930px;
+        }
+        .button5 {
+
+            color: black;
+            border: 2px solid #49b7e0;
+            position: fixed;
+            top: 200px;
+            left: 1230px;
+
+
+        }
+        .button5:hover {
+            background-color: #49b7e0;
+            color: white;
+            position: fixed;
+            top: 200px;
+            left: 1230px;
+        }
+        .button6 {
+            color: black;
+            border: 2px solid #9a9a9a;
+            position: fixed;
+            bottom: 100px;
+            left: 1530px;
+
+
+        }
+        .button6:hover {
+            background-color: #9a9a9a;
+            color: white;
+            position: fixed;
+            bottom: 100px;
+            left: 1530px;
+        }
+
+    </style>
 
 </head>
-<body>
-{% endblock %}
+    <body>
+    <!-- Animation -->
+    <script src="{{ url_for('static', filename='three.r119.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vantaClouds.js') }}"></script>
+    <script>
+        VANTA.CLOUDS({
+            el: "body",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 1000.00,
+            minWidth: 200.00
+        })
+    </script>
+    <!-- Animation -->
 
+    <form action="https://youtu.be/uom6RoyqFiE"  target="_blank">
+        <button
+                type="submit"  class="button button1"><b>Ocean</b>
+        </button>
+    </form>
+
+    <form action="https://youtu.be/xNN7iTA57jM"  target="_blank">
+        <button
+                type="submit"  class="button button2"><b>Forest</b>
+        </button>
+    </form>
+
+    <form action="https://youtu.be/mPZkdNFkNps"  target="_blank">
+        <button
+                type="submit"  class="button button3"><b>Rain</b>
+        </button>
+    </form>
+
+    </form>
+
+    <form action="https://youtu.be/-dxEdRTXdPM"  target="_blank">
+        <button
+                type="submit"  class="button button4"><b>Dreams</b>
+        </button>
+    </form>
+
+    <form action="https://youtu.be/nE_XAauwu1I"  target="_blank">
+        <button
+                type="submit"  class="button button5"><b>River</b>
+        </button>
+    </form>
+
+    <form action="https://youtu.be/5VXBjs2hrSg"  target="_blank">
+        <button
+                type="submit"  class="button button6"><b>Zen</b>
+        </button>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
 </body>
 </html>

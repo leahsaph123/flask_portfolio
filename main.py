@@ -1,8 +1,9 @@
 # import "packages" from flask
 import requests
-from flask import Flask, render_template, request, Blueprint
+from flask import Flask, render_template, request
 from algorithm.images import image_data
 from pathlib import Path
+
 
 # create a Flask instance
 app = Flask(__name__)
@@ -141,18 +142,6 @@ def calmingSounds():
     # starting and empty input default
     return render_template("calmingSounds.html", name1="World")
 
-app_starter = Blueprint('starter', __name__,
-                        template_folder='templates')
-
-@app_starter.route('/joke', methods=['GET', 'POST'])
-def joke():
-    url = "https://csp.nighthawkcodingsociety.com/api/index"
-
-    response = requests.request("GET", url)
-    return render_template("/index.html", joke=response.json())
-
-
-
 
 
 student_list = [
@@ -164,8 +153,6 @@ print(student_list[6])
 print(student_list)
 
 
-
-app.register_blueprint(app_starter)
 
 
 # runs the application on the development server
