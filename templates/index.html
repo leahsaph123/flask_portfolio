@@ -5,14 +5,34 @@
 {% set project = "dreamzzz" %}
 
 <!-- Setting up a block replacement to customize background to BIRDS -->
+
 {% block body %}
-    <p class="quote"> Quote of the Day: {{ quote }} </p>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    </head>
+
     <script>
-    function quote(){
+        function get_quote_of_the_day() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    // Access the result here
+                    alert(this.responseText);
+                }
+            };
+            xhttp.open("GET", "https://quotes.rest/qod?category=inspire", true);
+            xhttp.setRequestHeader("Content-type", "application/json");
+            xhttp.setRequestHeader("X-Theysaidso-Api-Secret", "YOUR API HERE");
+            xhttp.send();
+        }
 
-    }
-
+        get_quote_of_the_day()
+        var quote = document.getElementById(get_quote_of_the_day())
+        $("#qotd").text(quote);
     </script>
+    <div id="qotd">
+
+    </div>
 
     <div class="container">
     <div class="row">
@@ -22,8 +42,12 @@
     </div>
     </div>
 
+    <div class="sidenav">
+        helping students improve their mental health
+    </div>
 
-<table class="table table-bordered">
+
+<table class="table table-bordered" margin-left: 200px>
     <thead>
     <tr>
         <th width="150px" height="100px">ARTICLE 1</th>
@@ -33,9 +57,30 @@
     </thead>
 
      <style>
-     p.quote {align-text: center}
-     .col {border-color: darkgreen}
+     p.quote {
+         align-text: center;
+         margin-left: 200px
+     }
+     .col {
+         border-color: darkgreen;
+         margin-left: 200px;
+     }
      p {text-color: darkgreen}
+     .sidenav {
+         width: 200px;
+         height: 100%;
+         position: fixed;
+         z-index: 1;
+         top: 56px;
+         background: darkgreen;
+         overflow-x: hidden;
+         padding: 8px 0;
+         text-color: black;
+         text-align: center;
+     }
+     .body {
+         margin-left: 200px;
+     }
      </style>
 
 {% endblock %}
