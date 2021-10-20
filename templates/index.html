@@ -12,26 +12,26 @@
     </head>
 
     <script>
-        function get_quote_of_the_day() {
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    // Access the result here
-                    alert(this.responseText);
-                }
-            };
-            xhttp.open("GET", "https://quotes.rest/qod?category=inspire", true);
-            xhttp.setRequestHeader("Content-type", "application/json");
-            xhttp.setRequestHeader("X-Theysaidso-Api-Secret", "YOUR API HERE");
-            xhttp.send();
-        }
+        fetch("https://quotes.rest/qod?language=en")
+            .then(response => {
+                response.json().then(json => {
+                    //console.log(json)
+                    const contents = json['contents']
+                    const index = 0;
+                    const quoteDict = contents['quotes']['0']
+                    const author = quoteDict['author']
+                    const quote = quoteDict['quote'];
+                    $("#qotd").text(quote)
+                })
+                //console.log(response.json());
 
-        get_quote_of_the_day()
-        var quote = document.getElementById(get_quote_of_the_day())
-        $("#qotd").text(quote);
+            })
+            .catch(err => {
+                console.error(err);
+            });
     </script>
-    <div id="qotd">
-
+    <div id="qotdbox">
+        <p id="qotd">The quote of the day is: </p>
     </div>
 
     <div class="container">
@@ -39,47 +39,38 @@
         <div class="rounded col">
             <p>Latest Articles</p>
         </div>
+    <div class="w-100">
+    <div class="container">
+        <div class="row">
+            <div class="rounded col">
+                <p> article 1</p>
+            </div>
+            <div class="rounded col">
+                <p> article 2</p>
+            </div>
+            <div class="rounded col">
+                <p>article 3</p>
+            </div>
+        </div>
+    </div>
+    </div>
     </div>
     </div>
 
-    <div class="sidenav">
-        helping students improve their mental health
-    </div>
 
 
-<table class="table table-bordered" margin-left: 200px>
-    <thead>
-    <tr>
-        <th width="150px" height="100px">ARTICLE 1</th>
-        <th width="150px" height="100px">ARTICLE 2</th>
-        <th width="150px" height="100px">ARTICLE 3</th>
-    </tr>
-    </thead>
+
 
      <style>
-     p.quote {
-         align-text: center;
-         margin-left: 200px
+     p {
+         align-content: center;
      }
      .col {
          border-color: darkgreen;
-         margin-left: 200px;
      }
-     p {text-color: darkgreen}
-     .sidenav {
-         width: 200px;
-         height: 100%;
-         position: fixed;
-         z-index: 1;
-         top: 56px;
-         background: darkgreen;
-         overflow-x: hidden;
-         padding: 8px 0;
-         text-color: black;
+     .qotd {
          text-align: center;
-     }
-     .body {
-         margin-left: 200px;
+         border-color: darkgreen;
      }
      </style>
 
