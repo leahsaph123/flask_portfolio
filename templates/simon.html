@@ -27,7 +27,7 @@
             <style>
 
             /** Everything that fades in **/
-                p,h4 ,#simon,.col-12,.z {font-size: 25px;
+                p.fun,h4 ,#simon,.col-12,.z {font-size: 25px;
                     animation-name:fadein;
                     animation-duration:4s;
                     color:darkgreen; }
@@ -73,24 +73,43 @@
                 it's also made by some really cool people, including me! ;) </p>
         </div>
 
-    <button class="simonDict"
+    <br>
 
-            onmousedown="display['randomValue']"> A fun Fact
+<!-- Stuff for my random fun fact -->
 
+    <p id = "GFG_UP" style =
+            "font-size: 1px; color:#cedec4;">
+    </p>
+
+    <p id = "GFG_DOWN" style =
+            "font-size: 24px; color:darkgreen;">
+    </p>
+
+    <button id = "button" onclick = "GFG_Fun()">
+        click for a fun fact
     </button>
 
+    <br>
 
     <script>
+        var up = document.getElementById('GFG_UP');
+        var down = document.getElementById('GFG_DOWN');
 
-        let randomValue = myFacts[Math.floor(Math.random() * myFacts.length)];
+        var arr = ["I am 17 years old", "I play the flute",
+            "I have my learners permit", "I like to read"];
 
-        let myFacts = ['I am 17', 'I like chocolate', 'I have my learners permit'];
+        up.innerHTML = "Click on the button to check "
+            + "the type of element.<br><br>" + arr;
 
-        </script>
+        function GFG_Fun() {
+            down.innerHTML =
+                arr[Math.floor(Math.random() * arr.length)];
+        }
+    </script>
 
 
 
-            <style>
+    <style>
 
                 h4{color:green}
             A:link {text-decoration:none }
