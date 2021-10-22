@@ -68,6 +68,7 @@ def simon():
     # starting and empty input default
     return render_template("simon.html", name1="World")
 
+
 @app.route('/minilab', methods=['GET', 'POST'])
 def minilab():
     # submit button has been pushed
