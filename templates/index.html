@@ -15,23 +15,42 @@
         fetch("https://quotes.rest/qod?language=en")
             .then(response => {
                 response.json().then(json => {
-                    //console.log(json)
-                    const contents = json['contents']
-                    const index = 0;
-                    const quoteDict = contents['quotes']['0']
-                    const author = quoteDict['author']
+                    console.log(json)
+                    const contents = json['contents'];
+                    const quoteDict = contents['quotes']['0'];
+                    const author = quoteDict['author'];
                     const quote = quoteDict['quote'];
-                    $("#qotd").text(quote)
+                    $("#qotd").text(quote + " - " + author);
                 })
-                //console.log(response.json());
-
             })
-            .catch(err => {
-                console.error(err);
-            });
+
+        var quotes = [
+            { quotess: "just keep swimming"},
+            { quotess: "never give up"},
+            { quotess: "don't stop until you're proud"},
+            { quotess: "believe in yourself and anything is possible"},
+            { quotess: "just do it"},
+            { quotess: "die with memories, not dreams"},
+            { quotess: "every moment is a fresh beginning"},
+            { quotess: "shoot for the moon- if you miss you'll land among the stars"},
+            { quotess: "believe you can and you're halfway there"},
+            { quotess: "take a minute to relax"},
+            { quotess: "the best view comes after the hardest climb"}
+        ]
+
+        var index = 0;
+        index = Math.random() * 10;
+        index = Math.round(index);
+        let toPrint = quotes[index];
+        let text = toPrint.toString();
+        console.log(toPrint);
+        $("#qotdpart2").text(text);
+        document.getElementById("qotdpart2").innerHTML = text;
     </script>
-    <div id="qotdbox">
+
+    <div>
         <p id="qotd">The quote of the day is: </p>
+        <p id="qotdpart2"></p>
     </div>
 
     <div class="container">
@@ -39,6 +58,7 @@
         <div class="rounded col">
             <p>Latest Articles</p>
         </div>
+
     <div class="w-100">
     <div class="container">
         <div class="row">
@@ -68,7 +88,7 @@
      .col {
          border-color: darkgreen;
      }
-     .qotd {
+     qotd {
          text-align: center;
          border-color: darkgreen;
      }
