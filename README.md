@@ -22,6 +22,7 @@ Week 9
 ====
 10/18-10/22
 [Review](https://github.com/leahsaph123/flask_portfolio/issues/68)
+[Videos](https://github.com/leahsaph123/flask_portfolio/issues/69)
 
 Week 7
 ====
