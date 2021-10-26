@@ -5,11 +5,42 @@
 {% set project = "dreamzzz" %}
 
 <!-- Setting up a block replacement to customize background to BIRDS -->
+{% block head %}
+<script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+
+
+{% endblock %}
 
 {% block body %}
-    <head>
-        <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
-    </head>
+    <div>
+        <p id="qotd">The quote of the day is: </p>
+        <p id="qotdpart2">default</p>
+    </div>
+
+    <div class="container">
+    <div class="row">
+        <div class="rounded col">
+            <p id="dino">Latest Articles</p>
+        </div>
+
+    <div class="w-100">
+    <div class="container">
+        <div class="row">
+            <div class="rounded col">
+                <p> article 1</p>
+            </div>
+            <div class="rounded col">
+                <p> article 2</p>
+            </div>
+            <div class="rounded col">
+                <p>article 3</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
 
     <script>
         fetch("https://quotes.rest/qod?language=en")
@@ -39,46 +70,13 @@
         ]
 
         var index = 0;
-        index = Math.random() * 10;
+        index = Math.random() * quotes.length;
         index = Math.round(index);
-        let toPrint = quotes[index];
-        let text = toPrint.toString();
-        console.log(toPrint);
-        $("#qotdpart2").text(text);
-        document.getElementById("qotdpart2").innerHTML = text;
+        var q = quotes[index].quotess;
+        //console.log("Toprint: ", toPrint);
+        //$("#qotdpart2").text(quotes[index].quotess);
+        document.getElementById("qotdpart2").innerHTML = quotes[index].quotess;
     </script>
-
-    <div>
-        <p id="qotd">The quote of the day is: </p>
-        <p id="qotdpart2"></p>
-    </div>
-
-    <div class="container">
-    <div class="row">
-        <div class="rounded col">
-            <p>Latest Articles</p>
-        </div>
-
-    <div class="w-100">
-    <div class="container">
-        <div class="row">
-            <div class="rounded col">
-                <p> article 1</p>
-            </div>
-            <div class="rounded col">
-                <p> article 2</p>
-            </div>
-            <div class="rounded col">
-                <p>article 3</p>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
-    </div>
-
-
-
 
 
      <style>
