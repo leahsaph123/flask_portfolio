@@ -1,0 +1,150 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "pomodoro" %}
+
+<head>
+    <meta charset="utf-8"/>
+</head>
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+
+<h2>Pomodoro Timer</h2>
+
+ <br>
+
+<p>Pomodoro will give you 25 minutes to work, short break will give you 5 minutes to rest,
+    and long break, will give you 15 minutes to rest.</p>
+
+
+    <style>
+
+    #clock{font-size: 60px; text-align: center}
+    p{font-size: 25px;color:darkgreen;text-align: center;}
+    h2{font-size: 40px;color:darkgreen;text-align: center;}
+    .butts{color:darkgreen;text-align: center}
+    .but{background-color:lightpink;
+        color:darkgreen;
+        border: none;
+        padding: 15px 32px;
+        text-decoration: none;
+        display: inline-block;}
+    body {background-color:#cedec4}
+
+    </style>
+
+    <p id="clock"></p>
+
+    <script>
+        setInterval(myTimer, 1000);
+
+        function myTimer() {
+            const d = new Date();
+            document.getElementById("clock").innerHTML = d.toLocaleTimeString();
+        }
+
+    </script>
+
+<!-- Buttons-->
+<div class="butts">
+
+<!--Pomodoro-->
+<button class="but"
+
+        onmousedown="setTimeout(PomodoroSet, 1);"
+
+        onmouseout="setTimeout(PomodoroAlarm, 1500000);"> Pomodoro
+
+</button>
+
+<script>
+
+    function PomodoroSet() {
+        alert('Pomodoro is Set');
+    }
+
+
+    function PomodoroAlarm() {
+        alert('Pomodoro Work time is Over');
+    }
+
+</script>
+
+
+<!-- Short Break (second alert doesn't work) -->
+<button class="but"
+
+        onmousedown="setTimeout(ShortSet, 1);"
+
+        onmouseout="setTimeout(ShortAlarm, 300000);"> Short Break
+</button>
+
+<script>
+    function ShortSet() {
+        alert('Short Rest is Set');
+    }
+
+
+    function ShortAlarm() {
+        alert('Short Rest is Over');
+    }
+</script>
+
+
+<!--Long Break -->
+<button class="but"
+    onmousedown="setTimeout(LongSet, 1);"
+
+    onmouseout="setTimeout(LongAlarm, 900000);"> Long Break
+</button>
+
+
+<script>
+
+    function LongSet() {
+        alert('Long Rest is Set');
+    }
+
+
+    function LongAlarm() {
+        alert('Long Rest is Over');
+    }
+</script>
+
+
+
+<!--Test code works no onmouseout! -->
+<button class="but"
+
+        onmousedown="setTimeout(testSet, 1);"
+
+        onmouseout="setTimeout(testRest, 3000);">Test Button
+
+</button>
+
+<script>
+    function testSet() {
+        alert('Test is Set');
+    }
+
+
+    function testRest() {
+        alert('Test is Working');
+    }
+</script>
+
+
+
+
+
+
+</div>
+
+
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}
