@@ -8,33 +8,45 @@
 {% block body %}
 
 
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+</head>
+
     <p>Articles About Mental Health</p>
     <div class="container rounded" >
     <div class="row mx-n5 g-1">
         <div class="col px-5 rounded">
             <div class="p-3">Mindfulness</div>
         </div>
-        <div class="col px-5 rounded" width: 100%>
+        <div class="col px-5 rounded">
             <div class="p-3">
-                <a href="https://greatergood.berkeley.edu/article/item/five_ways_mindfulness_meditation_is_good_for_your_health">   </a>
+                <a href="https://greatergood.berkeley.edu/article/item/five_ways_mindfulness_meditation_is_good_for_your_health" id="marticle1">  </a>
             </div>
         </div>
-        <div class="col px-5 rounded" width: 100%>
-            <div class="p-3">Mindfulness</div>
+        <div class="col px-5 rounded">
+            <div class="p-3">
+                <a href="https://www.bu.edu/articles/2021/mindfulness-why-it-matters/" id="marticle2">  </a>
+            </div>
         </div>
     </div>
-
-        <div class="w-100"></div>
     <div class="row mx-n5 g-1">
         <div class="col px-5 rounded">
             <div class="p-3">Time-Management</div>
         </div>
 
         <div class="col px-5 rounded">
-            <div class="p-3"></div>
+            <div class="p-3">
+                <div class="p-3">
+                    <a href="https://iopscience.iop.org/article/10.1088/1742-6596/995/1/012042" id="tmarticle1">  </a>
+                </div>
+            </div>
         </div>
         <div class="col px-5 rounded">
-            <div class="p-3"></div>
+            <div class="p-3">
+                <div class="p-3">
+                    <a href="https://mcgraw.princeton.edu/effective-time-management" id="tmarticle2">  </a>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -45,10 +57,18 @@
             </div>
 
             <div class="col px-5 rounded">
-                <div class="p-3"></div>
+                <div class="p-3">
+                    <div class="p-3">
+                        <a href="https://www.health.harvard.edu/mind-and-mood/focus-on-concentration" id="farticle1">  </a>
+                    </div>
+                </div>
             </div>
             <div class="col px-5 rounded">
-                <div class="p-3"></div>
+                <div class="p-3">
+                    <div class="p-3">
+                        <a href="https://www.bbc.com/worklife/article/20170925-the-surprising-tricks-to-help-you-focus-at-work" id="farticle2">  </a>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -59,14 +79,37 @@
             </div>
 
             <div class="col px-5 rounded">
-                <div class="p-3"></div>
+                <div class="p-3">
+                    <div class="p-3">
+                        <a href="https://www.verywellmind.com/stress-management-4157211" id="smarticle1">  </a>
+                    </div>
+                </div>
             </div>
             <div class="col px-5 rounded">
-                <div class="p-3"></div>
+                <div class="p-3">
+                    <div class="p-3">
+                        <a href="https://www.frontiersin.org/articles/10.3389/fpubh.2020.574969/full" id="smarticle2">  </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
+<script>
+    var articles = [
+        { mindfulness: "Five Ways Mindfulness Meditation Is Good for Your Health", timeManagement: "The Impact of Time Management on Students' Academic Achievement", focus: "Focus on concentration", stressManagement: "An Overview of Stress Management"},
+        { mindfulness: "Mindfulness: Why It Matters", timeManagement: "Principles of Effective Time Management for Balance, Well-being, and Success", focus: "Five ways science can improve your focus", stressManagement: "Coping With Stress and Burnout"},
+    ];
+    console.log(articles[0].mindfulness)
+    $("#marticle").text(articles[0].mindfulness);
+    document.getElementById('marticle1').innerHTML = articles[0].mindfulness
+    document.getElementById('marticle2').innerHTML = articles[1].mindfulness
+    document.getElementById('tmarticle1').innerHTML = articles[0].timeManagement
+    document.getElementById('tmarticle2').innerHTML = articles[1].timeManagement
+    document.getElementById('farticle1').innerHTML = articles[0].focus
+    document.getElementById('farticle2').innerHTML = articles[1].focus
+    document.getElementById('smarticle1').innerHTML = articles[0].stressManagement
+    document.getElementById('smarticle2').innerHTML = articles[1].stressManagement
+</script>
     <style>
         p {font-size: 20px; color:darkgreen; text-align: center}
         body {background-color:#cedec4}
@@ -91,5 +134,10 @@
             width: 200px;
         }
         #greet {font-size: 20px;color:darkgreen;}
+        #marticle1, #marticle2, #tmarticle1, #tmarticle2, #farticle1, #farticle2, #smarticle1, #smarticle2{color:green}
+        A:link {text-decoration:none }
+        A:visited {text-decoration:none }
+        A:active {text-decoration:none }
+        A:hover {text-decoration:none }
     </style>
 {% endblock %}

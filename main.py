@@ -28,10 +28,10 @@ def kangaroos():
 def walruses():
     return render_template("walruses.html")
 
-
-@app.route('/Articles/')
+@app.route('/articles')
 def Articles():
-    return render_template("Articles.html")
+    Articles = {"Mental Health": "article 1", "Mindfulness": "article 2", "Time Management": "article 3", "Stress Management": "article 4",}
+    return render_template("Articles.html", Articles=Articles)
 
 
 @app.route('/stub/')
