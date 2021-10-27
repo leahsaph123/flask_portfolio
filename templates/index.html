@@ -27,13 +27,13 @@
     <div class="container">
         <div class="row">
             <div class="rounded col">
-                <p> article 1</p>
+                <a href="/Articles/"> article 1</a>
             </div>
             <div class="rounded col">
-                <p> article 2</p>
+                <a href="/Articles/"> article 2</a>
             </div>
             <div class="rounded col">
-                <p>article 3</p>
+                <a href="/Articles/">article 3</a>
             </div>
         </div>
     </div>
@@ -48,7 +48,7 @@
                 response.json().then(json => {
                     console.log(json)
                     const contents = json['contents'];
-                    const quoteDict = contents['quotes']['0'];
+                    const quoteDict = contents['quotes'][0];
                     const author = quoteDict['author'];
                     const quote = quoteDict['quote'];
                     $("#qotd").text(quote + " - " + author);
@@ -56,25 +56,22 @@
             })
 
         var quotes = [
-            { quotess: "just keep swimming"},
-            { quotess: "never give up"},
-            { quotess: "don't stop until you're proud"},
-            { quotess: "believe in yourself and anything is possible"},
-            { quotess: "just do it"},
-            { quotess: "die with memories, not dreams"},
-            { quotess: "every moment is a fresh beginning"},
-            { quotess: "shoot for the moon- if you miss you'll land among the stars"},
-            { quotess: "believe you can and you're halfway there"},
-            { quotess: "take a minute to relax"},
-            { quotess: "the best view comes after the hardest climb"}
+            { quotess: "Just keep swimming"},
+            { quotess: "Never give up"},
+            { quotess: "Don't stop until you're proud"},
+            { quotess: "Believe in yourself and anything is possible"},
+            { quotess: "Just do it"},
+            { quotess: "Don't stop until you're proud"},
+            { quotess: "Every moment is a fresh beginning"},
+            { quotess: "Shoot for the moon- if you miss you'll land among the stars"},
+            { quotess: "Believe you can and you're halfway there"},
+            { quotess: "Take a minute to relax"},
+            { quotess: "The best view comes after the hardest climb"}
         ]
 
         var index = 0;
         index = Math.random() * quotes.length;
-        index = Math.round(index);
-        var q = quotes[index].quotess;
-        //console.log("Toprint: ", toPrint);
-        //$("#qotdpart2").text(quotes[index].quotess);
+        index = Math.floor(index);
         document.getElementById("qotdpart2").innerHTML = quotes[index].quotess;
     </script>
 
@@ -90,6 +87,11 @@
          text-align: center;
          border-color: darkgreen;
      }
+        rounded col{color: green}
+     A:link {text-decoration:none; color: darkgreen }
+     A:visited {text-decoration:none }
+     A:active {text-decoration:none }
+     A:hover {text-decoration:none }
      </style>
 
 {% endblock %}

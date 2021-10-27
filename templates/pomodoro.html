@@ -52,97 +52,55 @@
 
 <!--Pomodoro-->
 <button class="but"
-
         onmousedown="setTimeout(PomodoroSet, 1);"
-
         onmouseout="setTimeout(PomodoroAlarm, 1500000);"> Pomodoro
-
 </button>
+    <button class="but"
+            onmousedown="setTimeout(ShortSet, 1);"
+            onmouseout="setTimeout(ShortAlarm, 300000);"> Short Break
+    </button>
+    <!--Long Break -->
+    <button class="but"
+            onmousedown="setTimeout(LongSet, 1);"
+            onmouseout="setTimeout(LongAlarm, 900000);"> Long Break
+    </button>
+    <!--Test code works no onmouseout! -->
+    <button class="but"
+            onmousedown="setTimeout(testSet, 1);"
+            onmouseout="setTimeout(testRest, 3000);">Test Button
+    </button>
+</div>
 
-<script>
-
+    <script>
     function PomodoroSet() {
         alert('Pomodoro is Set');
+        PomodoroAlarm()
     }
-
-
     function PomodoroAlarm() {
         alert('Pomodoro Work time is Over');
     }
-
-</script>
-
-
-<!-- Short Break (second alert doesn't work) -->
-<button class="but"
-
-        onmousedown="setTimeout(ShortSet, 1);"
-
-        onmouseout="setTimeout(ShortAlarm, 300000);"> Short Break
-</button>
-
-<script>
     function ShortSet() {
         alert('Short Rest is Set');
+        ShortAlarm()
     }
-
-
     function ShortAlarm() {
         alert('Short Rest is Over');
     }
-</script>
-
-
-<!--Long Break -->
-<button class="but"
-    onmousedown="setTimeout(LongSet, 1);"
-
-    onmouseout="setTimeout(LongAlarm, 900000);"> Long Break
-</button>
-
-
-<script>
-
     function LongSet() {
         alert('Long Rest is Set');
+        LongAlarm()
     }
-
-
     function LongAlarm() {
         alert('Long Rest is Over');
     }
-</script>
-
-
-
-<!--Test code works no onmouseout! -->
-<button class="but"
-
-        onmousedown="setTimeout(testSet, 1);"
-
-        onmouseout="setTimeout(testRest, 3000);">Test Button
-
-</button>
-
-<script>
     function testSet() {
         alert('Test is Set');
+        testRest()
     }
-
-
     function testRest() {
         alert('Test is Working');
     }
 </script>
-
-
-
-
-
-
-</div>
-
-
 {% endblock %}
 
 <!- This is turning off birds background from base.html -->
