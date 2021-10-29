@@ -190,11 +190,11 @@
             let binary = getBits();
             // convert to decimal and do math
             let decimal = parseInt(binary, 2);
-            if (n == 1) {  // PLUS
+            if (n === 1) {  // PLUS
                 decimal = MAX === decimal ? 0 : decimal += n; // OVERFLOW or PLUS
-            } else if (n==2) {     // MINUS
-                decimal = MAX == decimal ? 0 : decimal *= n; // OVERFLOW or MINUS
-            } else if (n==0.5) {
+            } else if (n===2) {     // MINUS
+                decimal = MAX === decimal ? 0 : decimal *= n; // OVERFLOW or MINUS
+            } else if (n===0.5) {
                 decimal = MAX === decimal ? 0 : decimal *=n;
             } else  {decimal = 0=== decimal ? MAX : decimal +=n;}
             // convert the result back to binary
