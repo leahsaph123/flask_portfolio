@@ -100,6 +100,7 @@ def Tigran():
     # starting and empty input default
     return render_template("Tigran.html", name="World")
 
+
 @app.route('/isabella', methods=['GET', 'POST'])
 def isabella():
     # submit button has been pushed
