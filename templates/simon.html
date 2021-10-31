@@ -41,18 +41,14 @@
              p.fun {font-size: 25px;color:darkgreen;text-align: center;}
             body {background-color:#cedec4}
 
-            /** Made smaller zz's for Dreamzzz**/
-            .z::after {
-                content:"zz";
-                font-size:15px;}
-
-            ::selection {
-                color: lightgreen;
-                background: floralwhite;}
-
             .aboutme{
                 border-style:outset;
                 color:#cedec4;}
+
+            /** The highlight color **/
+            ::selection {
+                color: cornsilk;
+                background: darkseagreen;}
 
 
             </style>
@@ -85,9 +81,13 @@
             "font-size: 24px; color:darkgreen;">
     </p>
 
+
     <button id = "button" onclick = "GFG_Fun()">
         click for a fun fact
+
     </button>
+
+
 
     <br>
 
@@ -97,10 +97,10 @@
 
         var arr = ["I am 17 years old", "I am symphonic band's flute section leader",
             "I have my learners permit", "I get my license in Jan. so excited!", "I love to read, particularly fantasy", "I just joined Del Nortes's hip-hop club",
-            " I am the solo Bass singer in our show choir Vocal Flight", "I am going to have a great time at Home-Coming",
-        "I soooo nailed my Stats quiz /s", "I objectively have the Best friends in the world!", "My friends are better than yours /hj",
-            "I am better than you /j", "I am right behind you /j", "My favorite candy is Twix", "I am going to be a polar bear for Halloween",
-        "My friends and I are going to play some D&d on Halloween", "BOO!", "I have to lead a sectional today :(" ];
+            " I am the solo Bass singer in our show choir Vocal Flight", "I had a great time at Home-Coming",
+         "I objectively have the Best friends in the world!", "My friends are better than yours /hj",
+            "I am better than you /j", "My favorite candy is Twix", "I am going to be a polar bear for Halloween",
+        "My friends and I are going to play some D&d on Halloween", "BOO!", "I have to lead a sectional today :(","*spooky noise", ];
 
         up.innerHTML = "Click on the button to check "
             + "the type of element.<br><br>" + arr;
@@ -131,7 +131,10 @@
                     50% {transform:rotateY(180deg)}
                     100% {transform:rotateY(-360deg)} }
 
+
             </style>
+
+
 
             <br>
 
@@ -147,6 +150,8 @@
                 <embed type="image/jpg" src="https://freesvg.org/img/Thumbs-Up-Silhouette.png" width="200" height="200"> </a>
              <p> this nifty picture links my notes</p>
          </div>
+
+
 
 
 {% endblock %}
