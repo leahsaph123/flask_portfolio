@@ -7,6 +7,10 @@ Table of Contents
   * [Week 6](#week-5-and-week-6)
   * [Week 7](#week-7)
 
+Overview
+=====
+This website is a way for students to relax. With articles about mindfulness, meditation videos, calming sounds and inspirational quotes this website is the place to go for mental health and stress relief.
+
 Credits
 =====
 
