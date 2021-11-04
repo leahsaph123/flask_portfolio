@@ -144,6 +144,16 @@ def calmingSounds():
     # starting and empty input default
     return render_template("calmingSounds.html", name1="World")
 
+@app.route('/scenery', methods=['GET', 'POST'])
+def scenery():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("scenery.html", name1=name)
+    # starting and empty input default
+    return render_template("scenery.html", name1="World")
+
 
 
 student_list = [
